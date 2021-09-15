@@ -33,21 +33,15 @@ article {
     }
     .top {
         position: absolute;
-        //top: -130%;
-        //left: -40%;
         top: -80%;
         right: 50%;
         z-index: -1;
         width: 70%;
         @media only screen and (max-width: 1300px) and (min-width: 1024px)  {
-            //top: -120%;
-            //left: -45%;
             top: -60%;
             right: 55%;
         }
         @media only screen and (max-width: 1023px) and (min-width: 768px)  {
-            //top: -80%;
-            //left: -50%;
             top: -40%;
             right: 55%;
         }
@@ -57,14 +51,10 @@ article {
             width: 75%;
         }
         @media only screen and (max-width: 660px) and (min-width: 501px) {
-            //top: -40%;
-            //left: -50%;
             top: -10%;
             right: 50%;
         }
         @media(max-width: 500px) {
-            //top: -20%;
-            //left: -50%;
             top: -10%;
             right: 50%;
         }
@@ -72,8 +62,6 @@ article {
     .bottom {
         z-index: -1;
         position: absolute;
-        //top: 50%;
-        //left: 38%;
         width: 70%;
         top: 54%;
         left: 48%;
