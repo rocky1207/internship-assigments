@@ -32,11 +32,12 @@ section.pictures {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 17px 25px;
     padding: 80px 80px;
 }
 img {
     max-width: 100%;
+    vertical-align: bottom;
 }
 #big_pic {
     grid-column: 2 / 4;
