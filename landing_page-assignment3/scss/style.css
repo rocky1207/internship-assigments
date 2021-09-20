@@ -83,6 +83,7 @@ upper section
 
 #upper article div button:nth-child(3):hover {
   background: #71C0D4;
+  cursor: pointer;
 }
 
 #upper article div button:nth-child(3) span {
@@ -105,6 +106,7 @@ upper section
 
 #upper article div button:last-child:hover {
   background: #B18BDD;
+  cursor: pointer;
 }
 
 #upper article img:last-child {
@@ -261,6 +263,7 @@ footer article button {
 
 footer article button:hover {
   background: #B18BDD;
+  cursor: pointer;
 }
 
 footer article button span {

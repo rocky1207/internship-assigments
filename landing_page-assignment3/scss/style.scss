@@ -73,6 +73,7 @@ upper section
                 margin-right: 16px;
                 &:hover {
                     background: #71C0D4;
+                    cursor: pointer;
                 }
                 span {
                     color: $lightBlue;
@@ -92,6 +93,7 @@ upper section
                 line-height: 26px;
                 &:hover {
                     background: #B18BDD;
+                    cursor: pointer;
                 }
             }
         }
@@ -230,6 +232,7 @@ footer {
             width: 193px;
             &:hover {
                 background: #B18BDD;
+                cursor: pointer;
             }
             span {
                 display: inline-block;
