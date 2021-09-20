@@ -7,37 +7,47 @@ $lightBlue: rgba(143,227,249,1.0);
 $violetLight: rgba(217,184,255,1.0);
 $almostWhite: rgba(250,250,250,1.0);
 $white: rgba(255,255,255,1.0);
-$fontSize: 18px;                       
+$fontSize: 18px;
+/***********
+mixins
+************/ 
+@mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+@mixin font($size, $weight, $lineHeight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    font-style: normal;
+    line-height: $lineHeight;
+    color: $color;
+}                       
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 body {
     font-family:'Red Hat Display', sans-serif;
-    font-size: $fontSize;
-    line-height: 26px;
+    @include font($fontSize, 500, 26px, $niceGray);
     background-color: $almostWhite; 
-    font-weight: 500;
 }
 section {
     margin: 0 auto;
-    color: $niceGray;
     text-align: center;
-    width: 1440px;
+    width: 1504px;
 }
 /**************
 upper section
 *****************/
-#upper {
+.upper {
     padding-left: 4px;
     padding-top: 80px;
     padding-bottom: 55px;
-    overflow: hidden;
     article {
-        display: flex;
-        justify-content: space-between;
+        @include flex(space-between, center);
         padding-top: 158px;
         img {
             vertical-align: bottom;
@@ -49,10 +59,7 @@ upper section
         div {
             text-align: center;
             h1 {
-                font-weight: black;
-                color: $blackBlue;
-                font-size: 64px;
-                line-height: 64px; 
+                @include font(64px, 900, 64px, $blackBlue);
                 padding-bottom: 34px;             
             }
             p {
@@ -62,12 +69,8 @@ upper section
                 display: inline-block;
                 height: 58px;
                 width: 193px;
-                color: $white;
                 background: $blue;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 900;
-                line-height: 26px;
+                @include font(16px, 900, 26px, $white);
                 border: none;
                 border-radius: 29px;
                 margin-right: 16px;
@@ -84,30 +87,22 @@ upper section
                 display: inline-block;
                 height: 58px;
                 width: 139px;
-                color: $white;
                 border: none;
                 border-radius: 29px;
                 background: $violet;
-                font-size: 16px;
-                font-weight: 900;
-                line-height: 26px;
+                @include font(16px, 900, 26px, $white);
                 &:hover {
                     background: #B18BDD;
                     cursor: pointer;
                 }
             }
         }
-        img:last-child {
-            margin-right: -60px;
-            
-        }
     }
 }
 /**************
 middle section
 *****************/
-#middle {
-    
+.middle {
     margin-bottom: 186px;
     p.num {
         position: relative;
@@ -115,11 +110,8 @@ middle section
         width: 56px;
         height: 140px;
         margin: 0 auto 69px;
-        
         span:first-child {
-            font-size: 16px;
-            font-weight: 900;
-            line-height: 26px;
+            @include font(16px, 900, 26px, $niceGray);
             padding: 15px 19px;
             border: 1px solid rgba(135,135,157,0.25);
             border-radius: 50px;
@@ -148,20 +140,14 @@ middle section
     article:last-child {
         padding-top: 80px;
         p.built {
-            color: $blue;
-            font-weight: 900;
-            font-size: 16px;
-            line-height: 26px;
+            @include font(16px, 900, 26px, $blue);
             letter-spacing: 4px;
             text-transform: uppercase;
             padding-bottom: 16px;
         }
         h2 {
-            font-weight: 900;
-            font-size: 40px;
-            line-height: 44px;
+            @include font(40px, 900, 44px, $blackBlue);
             text-align: center;
-            color: $blackBlue;
             padding-bottom: 32px;
         }
     }
@@ -171,28 +157,23 @@ footer
 ****************/ 
 footer {
     margin: 0 auto;
-    width: 1440px;
+    width: 1504px;
     background-image: linear-gradient(rgba($blue, .8), rgba($blue, .8)), url(../assets/desktop/image-footer.jpg);
     height:308px;
     margin-bottom: 50px;
-   /* margin-top: 100px;*/
     p.num {
         position: relative;
         top: -15px;
-        /*padding-top: 99px;*/
         width: 56px;
         height: 140px;
         margin: 0 auto;
         z-index: 1;
         span:first-child {
             background: $almostWhite;
-            font-size: 16px;
-            font-weight: 900;
-            line-height: 26px;
+            @include font(16px, 900, 26px, $niceGray);
             padding: 15px 19px;
             border: 1px solid rgba(135,135,157,0.25);
             border-radius: 50px;
-            color: $niceGray;
         }
         span:last-child {
             display: inline-block;
@@ -204,27 +185,16 @@ footer {
         }
     }
     article {
-        display: flex;
-        justify-content: space-around;
+        @include flex(space-between, center);
         width: 1100px;
         color: $almostWhite;
         margin: 0 auto;
         align-items: center;
         h3 {
-            font-weight: 900;
-            font-size: 40px;
-            line-height: 44px;
-        }
-        p {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 26px;
+            @include font(40px, 900, 44px, $almostWhite);
         }
         button {
-            font-weight: 900;
-            font-size: 16px;
-            line-height: 26px;
-            color: #fff;
+            @include font(16px, 900, 26px, $white);
             background: $violet;
             border: none;
             border-radius: 29px;
