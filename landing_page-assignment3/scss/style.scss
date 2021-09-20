@@ -38,26 +38,57 @@ section {
     margin: 0 auto;
     text-align: center;
     width: 1504px;
+    @media only screen and (max-width: 1504px) and (min-width: 810px)  {
+            
+        width: 100%;
+    }
 }
 /**************
 upper section
 *****************/
 .upper {
-    padding-left: 4px;
     padding-top: 80px;
     padding-bottom: 55px;
+    @media only screen and (max-width: 1504px) and (min-width: 810px)  {
+            
+        width: 100%;
+    }
     article {
         @include flex(space-between, center);
         padding-top: 158px;
+        @media only screen and (max-width: 1504px) and (min-width: 810px) {
+            padding-top: 64px;
+            
+        }
+        
         img {
             vertical-align: bottom;
         }
         img:first-child {
             margin-top: -55px;
             height: 303px;
+            @media only screen and (max-width: 1504px) and (min-width: 810px) {
+                margin-top: 0;
+                width: 394px;
+                
+            }
+
+            
+        }
+        img:last-child {
+            @media only screen and (max-width: 1504px) and (min-width: 810px) {
+                order: 2;
+                width: 394px;
+                
+            } 
         }
         div {
             text-align: center;
+            @media only screen and (max-width: 1504px) and (min-width: 810px)  {
+                order: 3;
+                flex: 100%;
+                padding-top: 72px;
+            }
             h1 {
                 @include font(64px, 900, 64px, $blackBlue);
                 padding-bottom: 34px;             
@@ -132,6 +163,10 @@ middle section
             margin-right: 30px;
             border-radius: 10px;
             vertical-align: bottom;
+            @media only screen and (max-width: 1200px) and (min-width: 810px) {
+                 height: 156px;
+                margin-right: 11px;
+            } 
         }
         img:last-child {
             margin-right: 0;
@@ -157,10 +192,19 @@ footer
 ****************/ 
 footer {
     margin: 0 auto;
-    width: 1504px;
+    max-width: 1504px;
     background-image: linear-gradient(rgba($blue, .8), rgba($blue, .8)), url(../assets/desktop/image-footer.jpg);
     height:308px;
     margin-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+        background-image: linear-gradient(rgba($blue, .8), rgba($blue, .8)), url(../assets/tablet/image-footer.jpg);    
+        width: 100%;
+        height: 428px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     p.num {
         position: relative;
         top: -15px;
@@ -168,6 +212,9 @@ footer {
         height: 140px;
         margin: 0 auto;
         z-index: 1;
+        @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+            height: 90px;
+        }
         span:first-child {
             background: $almostWhite;
             @include font(16px, 900, 26px, $niceGray);
@@ -190,8 +237,32 @@ footer {
         color: $almostWhite;
         margin: 0 auto;
         align-items: center;
+        @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+            @include flex(flex-start, center, column);
+            width: 70%;
+            text-align: center;
+            flex-wrap: nowrap;
+        }
         h3 {
             @include font(40px, 900, 44px, $almostWhite);
+            flex-basis: 30%;
+            @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+                padding-bottom: 32px;
+                
+                
+            }
+
+        }
+        p {
+            
+            flex-basis: 30%;
+            /*
+            @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+                padding-bottom: 32px;
+                
+                
+            }
+            */
         }
         button {
             @include font(16px, 900, 26px, $white);
@@ -200,9 +271,14 @@ footer {
             border-radius: 29px;
             height: 58px;
             width: 193px;
+           // flex-basis: 30%;
             &:hover {
                 background: #B18BDD;
                 cursor: pointer;
+            }
+            @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+                margin-top: 40px;
+                
             }
             span {
                 display: inline-block;

@@ -25,13 +25,24 @@ section {
   width: 1504px;
 }
 
+@media only screen and (max-width: 1504px) and (min-width: 810px) {
+  section {
+    width: 100%;
+  }
+}
+
 /**************
 upper section
 *****************/
 .upper {
-  padding-left: 4px;
   padding-top: 80px;
   padding-bottom: 55px;
+}
+
+@media only screen and (max-width: 1504px) and (min-width: 810px) {
+  .upper {
+    width: 100%;
+  }
 }
 
 .upper article {
@@ -50,6 +61,12 @@ upper section
   padding-top: 158px;
 }
 
+@media only screen and (max-width: 1504px) and (min-width: 810px) {
+  .upper article {
+    padding-top: 64px;
+  }
+}
+
 .upper article img {
   vertical-align: bottom;
 }
@@ -59,8 +76,36 @@ upper section
   height: 303px;
 }
 
+@media only screen and (max-width: 1504px) and (min-width: 810px) {
+  .upper article img:first-child {
+    margin-top: 0;
+    width: 394px;
+  }
+}
+
+@media only screen and (max-width: 1504px) and (min-width: 810px) {
+  .upper article img:last-child {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 394px;
+  }
+}
+
 .upper article div {
   text-align: center;
+}
+
+@media only screen and (max-width: 1504px) and (min-width: 810px) {
+  .upper article div {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    padding-top: 72px;
+  }
 }
 
 .upper article div h1 {
@@ -162,6 +207,13 @@ middle section
   vertical-align: bottom;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 810px) {
+  .middle article img {
+    height: 156px;
+    margin-right: 11px;
+  }
+}
+
 .middle article img:last-child {
   margin-right: 0;
 }
@@ -196,11 +248,24 @@ footer
 ****************/
 footer {
   margin: 0 auto;
-  width: 1504px;
+  max-width: 1504px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 150, 168, 0.8)), to(rgba(77, 150, 168, 0.8))), url(../assets/desktop/image-footer.jpg);
   background-image: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)), url(../assets/desktop/image-footer.jpg);
   height: 308px;
   margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 810px) {
+  footer {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 150, 168, 0.8)), to(rgba(77, 150, 168, 0.8))), url(../assets/tablet/image-footer.jpg);
+    background-image: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)), url(../assets/tablet/image-footer.jpg);
+    width: 100%;
+    height: 428px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 footer p.num {
@@ -210,6 +275,12 @@ footer p.num {
   height: 140px;
   margin: 0 auto;
   z-index: 1;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 810px) {
+  footer p.num {
+    height: 90px;
+  }
 }
 
 footer p.num span:first-child {
@@ -254,12 +325,53 @@ footer article {
           align-items: center;
 }
 
+@media only screen and (max-width: 1200px) and (min-width: 810px) {
+  footer article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70%;
+    text-align: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 footer article h3 {
   font-size: 40px;
   font-weight: 900;
   font-style: normal;
   line-height: 44px;
   color: #fafafa;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 810px) {
+  footer article h3 {
+    padding-bottom: 32px;
+  }
+}
+
+footer article p {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  /*
+            @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+                padding-bottom: 32px;
+                
+                
+            }
+            */
 }
 
 footer article button {
@@ -278,6 +390,12 @@ footer article button {
 footer article button:hover {
   background: #B18BDD;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 810px) {
+  footer article button {
+    margin-top: 40px;
+  }
 }
 
 footer article button span {
