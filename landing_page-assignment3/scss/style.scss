@@ -38,9 +38,11 @@ section {
     margin: 0 auto;
     text-align: center;
     width: 1504px;
-    @media only screen and (max-width: 1504px) and (min-width: 810px)  {
-            
+    @media only screen and (max-width: 1504px) and (min-width: 800px)  {
         width: 100%;
+    }
+    @media only screen and (max-width: 799px) and (min-width: 400px)  {
+        max-width: 100%;
     }
 }
 /**************
@@ -49,52 +51,74 @@ upper section
 .upper {
     padding-top: 80px;
     padding-bottom: 55px;
-    @media only screen and (max-width: 1504px) and (min-width: 810px)  {
-            
+    @media only screen and (max-width: 1504px) and (min-width: 800px)  {
         width: 100%;
+    }
+    @media only screen and (max-width: 799px) and (min-width: 400px)  {
+        padding-bottom: 39px;
     }
     article {
         @include flex(space-between, center);
         padding-top: 158px;
-        @media only screen and (max-width: 1504px) and (min-width: 810px) {
+        @media only screen and (max-width: 1504px) and (min-width: 800px) {
             padding-top: 64px;
-            
         }
-        
+        @media only screen and (max-width: 799px) and (min-width: 400px) {
+            padding-top: 54px;
+            @include flex(center, center);
+        }
         img {
             vertical-align: bottom;
         }
         img:first-child {
             margin-top: -55px;
             height: 303px;
-            @media only screen and (max-width: 1504px) and (min-width: 810px) {
+            @media only screen and (max-width: 1504px) and (min-width: 800px) {
                 margin-top: 0;
-                width: 394px;
-                
             }
-
-            
+            @media only screen and (max-width: 799px) and (min-width: 400px)  {
+                margin-top: 0;
+                height: 153px;
+            }
         }
         img:last-child {
-            @media only screen and (max-width: 1504px) and (min-width: 810px) {
+            @media only screen and (max-width: 1504px) and (min-width: 800px) {
                 order: 2;
-                width: 394px;
-                
             } 
+            @media only screen and (max-width: 799px) and (min-width: 400px)  {
+                height: 153px;
+            }
         }
         div {
             text-align: center;
-            @media only screen and (max-width: 1504px) and (min-width: 810px)  {
+            @media only screen and (max-width: 1504px) and (min-width: 800px)  {
                 order: 3;
                 flex: 100%;
                 padding-top: 72px;
             }
+            @media only screen and (max-width: 799px) and (min-width: 400px)  {
+                order: 3;
+                flex: 100%;
+                padding-top: 48px;
+            }
             h1 {
                 @include font(64px, 900, 64px, $blackBlue);
-                padding-bottom: 34px;             
+                padding-bottom: 34px;
+                @media only screen and (max-width: 1200px) and (min-width: 800px)  {
+                    @include font(48px, 900, 48px, $blackBlue);
+                    padding-bottom: 24px;                                                     
+                }
+                @media only screen and (max-width: 799px) and (min-width: 400px)  {
+                    @include font(40px, 900, 44px, $blackBlue);
+                    padding-bottom: 24px; 
+                }               
             }
             p {
                 padding-bottom: 32px;
+                @media only screen and (max-width: 599px) and (min-width: 400px)  {
+                    max-width: 90%;
+                    margin: 0 auto; 
+                } 
             }
             button:nth-child(3) {
                 display: inline-block;
@@ -113,6 +137,10 @@ upper section
                     color: $lightBlue;
                     margin-left: 4px;
                 }
+                @media only screen and (max-width: 799px) and (min-width: 400px) {
+                    display: block;
+                    margin: 0 auto 16px;
+                }
             }
             button:last-child {
                 display: inline-block;
@@ -126,6 +154,10 @@ upper section
                     background: #B18BDD;
                     cursor: pointer;
                 }
+                @media only screen and (max-width: 799px) and (min-width: 400px) {
+                    display: block;
+                    margin: 0 auto;
+                }
             }
         }
     }
@@ -134,7 +166,13 @@ upper section
 middle section
 *****************/
 .middle {
-    margin-bottom: 186px;
+    margin-bottom: 184px;
+    @media only screen and (max-width: 1200px) and (min-width: 600px)  {
+        margin-bottom: 192px; 
+    }
+    @media only screen and (max-width: 599px) and (min-width: 400px)  {
+        margin-bottom: 170px; 
+    }
     p.num {
         position: relative;
         padding-top: 99px;
@@ -146,7 +184,6 @@ middle section
             padding: 15px 19px;
             border: 1px solid rgba(135,135,157,0.25);
             border-radius: 50px;
-            
         }
         span:last-child {
             display: inline-block;
@@ -158,22 +195,45 @@ middle section
         }
     }
     article {
+        @include flex(space-between, center);
+        width: 1100px;
+        margin: 0 auto;
+        @media only screen and (max-width: 1200px) and (min-width: 800px) {
+            width: 689px;
+        }
+        @media only screen and (max-width: 799px) and (min-width: 400px)  {
+            width: 327px; 
+        }
         img {
             height: 242px;
-            margin-right: 30px;
             border-radius: 10px;
             vertical-align: bottom;
-            @media only screen and (max-width: 1200px) and (min-width: 810px) {
-                 height: 156px;
-                margin-right: 11px;
+            @media only screen and (max-width: 1200px) and (min-width: 800px) {
+                height: 156px;
+            }
+            @media only screen and (max-width: 799px) and (min-width: 400px)  {
+                height: 143px;
+                margin-bottom: 14px;
             } 
+
         }
-        img:last-child {
-            margin-right: 0;
+        img:last-child, img:nth-child(3) {
+             margin-bottom: 0;
         }
     }
     article:last-child {
+        display: block;
+        margin: 0 auto;
         padding-top: 80px;
+        width: 540px;
+        @media only screen and (max-width: 1200px) and (min-width: 600px) {
+            width: 573px;
+            padding-top: 48px;
+        }
+        @media only screen and (max-width: 599px) and (min-width: 400px)  {
+            width: 327px; 
+            padding-top: 64px;
+        } 
         p.built {
             @include font(16px, 900, 26px, $blue);
             letter-spacing: 4px;
@@ -184,6 +244,9 @@ middle section
             @include font(40px, 900, 44px, $blackBlue);
             text-align: center;
             padding-bottom: 32px;
+            @media only screen and (max-width: 599px) and (min-width: 400px)  {
+                @include font(32px, 900, 36px, $blackBlue); 
+            } 
         }
     }
 }
@@ -194,12 +257,18 @@ footer {
     margin: 0 auto;
     max-width: 1504px;
     background-image: linear-gradient(rgba($blue, .8), rgba($blue, .8)), url(../assets/desktop/image-footer.jpg);
-    height:308px;
-    margin-bottom: 50px;
+    height: 308px;
     background-repeat: no-repeat;
     background-size: cover;
-    @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+    @media only screen and (max-width: 1200px) and (min-width: 600px)  {
         background-image: linear-gradient(rgba($blue, .8), rgba($blue, .8)), url(../assets/tablet/image-footer.jpg);    
+        width: 100%;
+        height: 428px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    @media only screen and (max-width: 599px) and (min-width: 400px)  {
+        background-image: linear-gradient(rgba($blue, .8), rgba($blue, .8)), url(../assets/mobile/image-footer.jpg);    
         width: 100%;
         height: 428px;
         background-repeat: no-repeat;
@@ -212,7 +281,7 @@ footer {
         height: 140px;
         margin: 0 auto;
         z-index: 1;
-        @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+        @media only screen and (max-width: 1200px) and (min-width: 400px)  {
             height: 90px;
         }
         span:first-child {
@@ -237,32 +306,35 @@ footer {
         color: $almostWhite;
         margin: 0 auto;
         align-items: center;
-        @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+        @media only screen and (max-width: 1200px) and (min-width: 600px)  {
             @include flex(flex-start, center, column);
             width: 70%;
+            text-align: center;
+            flex-wrap: nowrap;
+        }
+        @media only screen and (max-width: 599px) and (min-width: 400px)  {
+            @include flex(space-between, center, column);
+            width: 90%;
             text-align: center;
             flex-wrap: nowrap;
         }
         h3 {
             @include font(40px, 900, 44px, $almostWhite);
             flex-basis: 30%;
-            @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+            @media only screen and (max-width: 1200px) and (min-width: 600px)  {
                 padding-bottom: 32px;
-                
-                
             }
 
+            @media only screen and (max-width: 599px) and (min-width: 400px)  {
+                @include font(32px, 900, 36px, $almostWhite);
+                padding-bottom: 24px;
+            }
         }
         p {
-            
             flex-basis: 30%;
-            /*
-            @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+            @media only screen and (max-width: 599px) and (min-width: 400px)  {
                 padding-bottom: 32px;
-                
-                
             }
-            */
         }
         button {
             @include font(16px, 900, 26px, $white);
@@ -271,14 +343,12 @@ footer {
             border-radius: 29px;
             height: 58px;
             width: 193px;
-           // flex-basis: 30%;
-            &:hover {
+             &:hover {
                 background: #B18BDD;
                 cursor: pointer;
             }
-            @media only screen and (max-width: 1200px) and (min-width: 810px)  {
+            @media only screen and (max-width: 1200px) and (min-width: 600px)  {
                 margin-top: 40px;
-                
             }
             span {
                 display: inline-block;
