@@ -72,6 +72,9 @@ upper section
             width: 394px;
             @include flex(space-between, flex-start);
             flex-wrap: nowrap;
+            @media only screen and (max-width: 819px) and (min-width: 805px) {
+                width: 385px;
+            }
             @media only screen and (max-width: 804px) and (min-width: 400px) {
                 width: 199px;
             }
