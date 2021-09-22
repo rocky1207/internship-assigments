@@ -25,13 +25,13 @@ section {
   width: 1504px;
 }
 
-@media only screen and (max-width: 1504px) and (min-width: 800px) {
+@media only screen and (max-width: 1504px) and (min-width: 805px) {
   section {
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   section {
     max-width: 100%;
   }
@@ -45,13 +45,7 @@ upper section
   padding-bottom: 55px;
 }
 
-@media only screen and (max-width: 1504px) and (min-width: 800px) {
-  .upper {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 799px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   .upper {
     padding-bottom: 39px;
   }
@@ -66,20 +60,38 @@ upper section
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-top: 158px;
+  padding-top: 108px;
 }
 
-@media only screen and (max-width: 1504px) and (min-width: 800px) {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
   .upper article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding-top: 64px;
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   .upper article {
     padding-top: 54px;
     display: -webkit-box;
@@ -90,6 +102,9 @@ upper section
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -97,48 +112,109 @@ upper section
   }
 }
 
-.upper article img {
-  vertical-align: bottom;
+.upper article div.images {
+  width: 394px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
-.upper article img:first-child {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper article div.images {
+    width: 199px;
+  }
+}
+
+.upper article div.images div.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.upper article div.images .group img {
+  height: 110px;
+  width: 110px;
+  margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper article div.images .group img {
+    height: 56px;
+    width: 56px;
+  }
+}
+
+.upper article div.minus {
   margin-top: -55px;
-  height: 303px;
 }
 
-@media only screen and (max-width: 1504px) and (min-width: 800px) {
-  .upper article img:first-child {
-    margin-top: 0;
+.upper article div.plus {
+  margin-top: 55px;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
+  .upper article div.one {
+    margin-right: 16px;
+    margin-top: 55px;
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
-  .upper article img:first-child {
-    margin-top: 0;
-    height: 153px;
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper article div.one {
+    margin-right: 8px;
   }
 }
 
-@media only screen and (max-width: 1504px) and (min-width: 800px) {
-  .upper article img:last-child {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
+  .upper article div.two {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    margin-left: 16px;
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
-  .upper article img:last-child {
-    height: 153px;
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper article div.two {
+    margin-left: 8px;
   }
 }
 
-.upper article div {
+.upper div.inner {
   text-align: center;
+  -webkit-box-flex: 26%;
+      -ms-flex: 26%;
+          flex: 26%;
 }
 
-@media only screen and (max-width: 1504px) and (min-width: 800px) {
-  .upper article div {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
+  .upper div.inner {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -149,8 +225,8 @@ upper section
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
-  .upper article div {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper div.inner {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -161,7 +237,7 @@ upper section
   }
 }
 
-.upper article div h1 {
+.upper div.inner h1 {
   font-size: 64px;
   font-weight: 900;
   font-style: normal;
@@ -171,7 +247,7 @@ upper section
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 800px) {
-  .upper article div h1 {
+  .upper div.inner h1 {
     font-size: 48px;
     font-weight: 900;
     font-style: normal;
@@ -181,8 +257,8 @@ upper section
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
-  .upper article div h1 {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper div.inner h1 {
     font-size: 40px;
     font-weight: 900;
     font-style: normal;
@@ -192,18 +268,18 @@ upper section
   }
 }
 
-.upper article div p {
+.upper div.inner p {
   padding-bottom: 32px;
 }
 
-@media only screen and (max-width: 599px) and (min-width: 400px) {
-  .upper article div p {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper div.inner p {
     max-width: 90%;
     margin: 0 auto;
   }
 }
 
-.upper article div button:nth-child(3) {
+.upper div.inner button:nth-child(3) {
   display: inline-block;
   height: 58px;
   width: 193px;
@@ -218,24 +294,24 @@ upper section
   margin-right: 16px;
 }
 
-.upper article div button:nth-child(3):hover {
+.upper div.inner button:nth-child(3):hover {
   background: #71C0D4;
   cursor: pointer;
 }
 
-.upper article div button:nth-child(3) span {
+.upper div.inner button:nth-child(3) span {
   color: #8fe3f9;
   margin-left: 4px;
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
-  .upper article div button:nth-child(3) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper div.inner button:nth-child(3) {
     display: block;
     margin: 0 auto 16px;
   }
 }
 
-.upper article div button:last-child {
+.upper div.inner button:last-child {
   display: inline-block;
   height: 58px;
   width: 139px;
@@ -249,13 +325,13 @@ upper section
   color: white;
 }
 
-.upper article div button:last-child:hover {
+.upper div.inner button:last-child:hover {
   background: #B18BDD;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
-  .upper article div button:last-child {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper div.inner button:last-child {
     display: block;
     margin: 0 auto;
   }
@@ -268,13 +344,13 @@ middle section
   margin-bottom: 184px;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 600px) {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
   .middle {
     margin-bottom: 192px;
   }
 }
 
-@media only screen and (max-width: 599px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   .middle {
     margin-bottom: 170px;
   }
@@ -317,6 +393,9 @@ middle section
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -325,13 +404,13 @@ middle section
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 800px) {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
   .middle article {
     width: 689px;
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   .middle article {
     width: 327px;
   }
@@ -343,13 +422,13 @@ middle section
   vertical-align: bottom;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 800px) {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
   .middle article img {
     height: 156px;
   }
 }
 
-@media only screen and (max-width: 799px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   .middle article img {
     height: 143px;
     margin-bottom: 14px;
@@ -367,14 +446,14 @@ middle section
   width: 540px;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 600px) {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
   .middle article:last-child {
     width: 573px;
     padding-top: 48px;
   }
 }
 
-@media only screen and (max-width: 599px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   .middle article:last-child {
     width: 327px;
     padding-top: 64px;
@@ -402,7 +481,7 @@ middle section
   padding-bottom: 32px;
 }
 
-@media only screen and (max-width: 599px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   .middle article:last-child h2 {
     font-size: 32px;
     font-weight: 900;
@@ -425,7 +504,7 @@ footer {
   background-size: cover;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 600px) {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
   footer {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 150, 168, 0.8)), to(rgba(77, 150, 168, 0.8))), url(../assets/tablet/image-footer.jpg);
     background-image: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)), url(../assets/tablet/image-footer.jpg);
@@ -436,7 +515,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 599px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   footer {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(77, 150, 168, 0.8)), to(rgba(77, 150, 168, 0.8))), url(../assets/mobile/image-footer.jpg);
     background-image: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)), url(../assets/mobile/image-footer.jpg);
@@ -492,6 +571,9 @@ footer article {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -499,12 +581,10 @@ footer article {
   width: 1100px;
   color: #fafafa;
   margin: 0 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 600px) {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
   footer article {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -514,6 +594,9 @@ footer article {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -525,7 +608,7 @@ footer article {
   }
 }
 
-@media only screen and (max-width: 599px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   footer article {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -535,6 +618,9 @@ footer article {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -556,13 +642,13 @@ footer article h3 {
       flex-basis: 30%;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 600px) {
+@media only screen and (max-width: 1200px) and (min-width: 805px) {
   footer article h3 {
     padding-bottom: 32px;
   }
 }
 
-@media only screen and (max-width: 599px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   footer article h3 {
     font-size: 32px;
     font-weight: 900;
@@ -578,7 +664,7 @@ footer article p {
       flex-basis: 30%;
 }
 
-@media only screen and (max-width: 599px) and (min-width: 400px) {
+@media only screen and (max-width: 804px) and (min-width: 400px) {
   footer article p {
     padding-bottom: 32px;
   }
@@ -602,7 +688,7 @@ footer article button:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 600px) {
+@media only screen and (max-width: 1200px) and (min-width: 804px) {
   footer article button {
     margin-top: 40px;
   }
