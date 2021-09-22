@@ -187,6 +187,12 @@ upper section
 
 @media only screen and (max-width: 804px) and (min-width: 400px) {
   .upper article div.one {
+    margin-top: 55px;
+  }
+}
+
+@media only screen and (max-width: 804px) and (min-width: 400px) {
+  .upper article div.one {
     margin-right: 8px;
   }
 }

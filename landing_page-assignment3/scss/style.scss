@@ -91,12 +91,16 @@ upper section
         div.minus {
             margin-top: -55px;
         }
+        
         div.plus {
             margin-top: 55px;
         }
         div.one {
             @media only screen and (max-width: 1200px) and (min-width: 805px) {
                 margin-right: 16px;
+                margin-top: 55px;
+            }
+            @media only screen and (max-width: 804px) and (min-width: 400px) {
                 margin-top: 55px;
             }
             @media only screen and (max-width: 804px) and (min-width: 400px) {
