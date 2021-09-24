@@ -59,6 +59,10 @@ p.question span:hover {
   cursor: pointer;
 }
 
+p.question span:visited {
+  color: black;
+}
+
 p.question img {
   float: right;
 }

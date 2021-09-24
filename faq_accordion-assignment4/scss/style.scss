@@ -47,6 +47,9 @@ p.question  {
             color: $softRed;
             cursor: pointer;
         }
+        &:visited {
+            color: black;
+        }
     }
     img {
         float: right;
