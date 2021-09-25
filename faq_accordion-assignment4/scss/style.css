@@ -31,6 +31,12 @@ h3 {
   padding-bottom: 13px;
 }
 
+@media only screen and (max-width: 767px) and (min-width: 327px) {
+  h3 {
+    text-align: center;
+  }
+}
+
 div.pHolders {
   padding: 0 0 18px 0;
   border-bottom: 1px solid #e7e7e9;
@@ -87,21 +93,21 @@ main {
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
   main {
     width: 720px;
-    height: 650px;
+    height: 550px;
   }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 500px) {
   main {
     width: 450px;
-    height: 643px;
+    height: 543px;
   }
 }
 
 @media only screen and (max-width: 499px) and (min-width: 327px) {
   main {
     width: 327px;
-    height: 643px;
+    height: 543px;
   }
 }
 
@@ -225,7 +231,6 @@ article.text {
 @media only screen and (max-width: 767px) and (min-width: 500px) {
   article.text {
     padding: 60px 30px;
-    text-align: center;
   }
 }
 

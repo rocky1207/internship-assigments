@@ -7,30 +7,23 @@ function start() {
     
 }
 
-function showAnswer(p,i) {
+function showAnswer(obj,i) {
     var text = ['You can invite 10 members, maximum.', 'No more than 2GB. All files in your account must fit your allotted storage space.', 'You should call an operator!', 'Of course You can...', 'Yes, we do...'];
-    p.style.fontWeight = '700';
-    p.style.color = '#1E1F36';
-    p.children[1].style.transform = 'rotate(180deg)';
+    obj.style.fontWeight = '700';
+    obj.style.color = '#1E1F36';
+    obj.children[1].style.transform = 'rotate(180deg)';
     var div = document.getElementsByClassName('pHolders');
-    var write_p = document.createElement('p');
-    div[i].appendChild(write_p);
-    
-    write_p.setAttribute('class', 'ispis');
-    var ispis = document.getElementsByClassName('ispis');
-    
-    
-    if(ispis.length == 1) {
-        ispis[0].innerHTML = text[i];
-        
-        console.log(i);
+    var p = document.createElement('p');
+    p.style.paddingTop = '3px';
+    div[i].appendChild(p);
+    if(div[i].children.length >2) {
+        p.remove();
     } else {
-        ispis[i].innerHTML = '';
-    } 
+        p.innerHTML = text[i];
+        setInterval(deleteAnswer, 3500, p);
+    }
 }
-/*
-function deleteAnswer(el) {
-    var num = 1;
-    num += el;
-    console.log(num);
-}*/
+function deleteAnswer(p) {
+    p.remove();
+}
+
