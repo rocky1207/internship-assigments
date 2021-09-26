@@ -1,12 +1,9 @@
 function start() {
     var question = document.getElementsByClassName('question');
-    
     for(var i=0; i<question.length; i++) {
         question[i].setAttribute('onclick', 'showAnswer(this,'+i+')');
     }
-    
 }
-
 function showAnswer(obj,i) {
     var text = ['You can invite 10 members, maximum.', 'No more than 2GB. All files in your account must fit your allotted storage space.', 'You should call an operator!', 'Of course You can...', 'Yes, we do...'];
     obj.style.fontWeight = '700';
