@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;900&display=swap');
+$niceGreen: rgba(84, 230, 175, 1.0);
+$darkGrey: rgba(44, 52, 75, 1.0);
+$grey: rgba(90, 102, 138, 1.0);
+$black: rgba(18, 23, 37, 1.0);
+$lightGrey: rgba(194, 203, 229, 1.0);
+$white: rgba(255, 255, 255, 1.0);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Chivo', sans-serif;
+    color: $white;
+    background-image:linear-gradient(rgba(18, 23, 37, .75), rgba(18, 23, 37, .75)), url(../mobile/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 100vh;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        background: $black;
+    }
+}
+.wrapp {
+    width: 327px;
+    margin: 0 auto;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width:635px;
+    }
+}
+@mixin font($fontSize, $lineHeight, $opacity:100%) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    opacity: $opacity;
+}
+@mixin bttn($width, $backgroundColor, $padding) {
+    width: $width;
+    background-color: $backgroundColor;
+    padding: $padding;
+}
+/***********
+header part
+************/
+header {
+    padding: 62px 0 57px;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        padding: 50px 0 152px 39px;
+    }
+}
+figure.logo {
+    text-align: center;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        text-align: left;
+    }
+    img {
+        width: 135px;
+        height: 56px;
+    }
+}
+/*************
+main part
+****************/
+main {
+    margin: 0 auto;
+    text-align: center;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        padding-top: 93px;
+        text-align: left;
+        background: $black;
+    }
+    h1 {
+        text-transform: uppercase;
+        @include font(26px, 38px);
+        font-weight: 300;
+        padding-bottom: 16px;
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            @include font(48px, 56px);
+            padding-bottom: 31px;
+        }
+    }
+}
+figure.backImg {
+    display: none;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 491px;
+        height: 100%;
+        z-index: -1;
+    }
+}
+.h_one span {
+    display: inline-block;
+    color: $niceGreen;  
+}
+p.p_main {
+    @include font(15px, 25px);
+    color: $lightGrey;
+    font-weight: 400;
+    padding-bottom: 33px;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 445px;
+        @include font(18px, 28px);
+    }
+}
+/***********
+media section
+************/
+section.media {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: 48px;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        width: 536px;
+        padding-top: 64px;
+    }
+    figure:first-child {
+        flex-basis: 56px;
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            flex-basis: 96px;
+        }
+    }
+    figure:nth-child(2) {
+        flex-basis: 45px;
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            flex-basis: 78px;
+        }
+    }
+    figure:nth-child(3) {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            flex-basis: 125px;
+        }
+    }
+    figure:last-child {
+        flex-basis: 77px;
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            flex-basis: 129px;
+        }
+    }
+}
+section.media img {
+    width: 100%;
+}
+/***********
+concatTab section
+************/
+section.contactTab{
+    @media only screen and (max-width: 767px) { 
+        display: none;
+    }
+    width: 427px;
+    background: $darkGrey;
+    border-radius: 28px;
+    border: none;
+    padding: 5px 5px 5px 0;
+    input {
+        width: 60%;
+        background: $darkGrey;
+        border-radius: 28px;
+        border: none;
+        padding: 15px 0 15px 32px;
+        //margin-bottom: 25px;
+    }
+    input::placeholder {
+        @include font(14px,28px);
+        font-weight: 400;
+        opacity: 50%;
+        color: $white;
+    }
+    button {
+        float: right;
+        @include bttn(162px, $niceGreen, 9px 0);
+        @include font(14px, 28px);
+        border-radius: 28px;
+        border: none;
+        font-weight: 900;
+        text-align: center;
+        color: $black;
+    }
+}
+/***********
+concatMob section
+************/
+section.contactMob {
+    @media only screen and (min-width: 767px) and (max-width: 1024px) {
+        @include font(48px, 56px);
+        display: none;
+    }
+    input {
+        width: 100%;
+        background: $darkGrey;
+        border-radius: 28px;
+        border: none;
+        padding: 15px 0 15px 32px;
+        margin-bottom: 25px;
+    }
+    input::placeholder {
+        @include font(14px,28px);
+        font-weight: 400;
+        opacity: 50%;
+        color: $white;
+    }
+    button {
+        @include bttn(100%, $niceGreen, 9px 0);
+        @include font(14px, 28px);
+        border-radius: 28px;
+        border: none;
+        font-weight: 900;
+        text-align: center;
+        color: $black;
+    }
+}
+/***********
+header part
+************/
+footer {
+    @media only screen and (min-width: 767px) and (max-width: 1024px) {
+        background: $black;
+        width: 100%;
+        display: block;
+        padding: 30px 0 0 0;
+    }
+}
+figure.dots {
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+}

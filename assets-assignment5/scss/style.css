@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 23, 37, 0.75)), to(rgba(18, 23, 37, 0.75))), url(../mobile/image-host.jpg);
+  background-image: linear-gradient(rgba(18, 23, 37, 0.75), rgba(18, 23, 37, 0.75)), url(../mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background: #121725;
+  }
+}
+
+.wrapp {
+  width: 327px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapp {
+    width: 635px;
+  }
+}
+
+/***********
+header part
+************/
+header {
+  padding: 62px 0 57px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    padding: 50px 0 152px 39px;
+  }
+}
+
+figure.logo {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  figure.logo {
+    text-align: left;
+  }
+}
+
+figure.logo img {
+  width: 135px;
+  height: 56px;
+}
+
+/*************
+main part
+****************/
+main {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  main {
+    padding-top: 93px;
+    text-align: left;
+    background: #121725;
+  }
+}
+
+main h1 {
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 38px;
+  opacity: 100%;
+  font-weight: 300;
+  padding-bottom: 16px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  main h1 {
+    font-size: 48px;
+    line-height: 56px;
+    opacity: 100%;
+    padding-bottom: 31px;
+  }
+}
+
+figure.backImg {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  figure.backImg {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 491px;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.h_one span {
+  display: inline-block;
+  color: #54e6af;
+}
+
+p.p_main {
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 100%;
+  color: #c2cbe5;
+  font-weight: 400;
+  padding-bottom: 33px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  p.p_main {
+    width: 445px;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 100%;
+  }
+}
+
+/***********
+media section
+************/
+section.media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section.media {
+    width: 536px;
+    padding-top: 64px;
+  }
+}
+
+section.media figure:first-child {
+  -ms-flex-preferred-size: 56px;
+      flex-basis: 56px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section.media figure:first-child {
+    -ms-flex-preferred-size: 96px;
+        flex-basis: 96px;
+  }
+}
+
+section.media figure:nth-child(2) {
+  -ms-flex-preferred-size: 45px;
+      flex-basis: 45px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section.media figure:nth-child(2) {
+    -ms-flex-preferred-size: 78px;
+        flex-basis: 78px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section.media figure:nth-child(3) {
+    -ms-flex-preferred-size: 125px;
+        flex-basis: 125px;
+  }
+}
+
+section.media figure:last-child {
+  -ms-flex-preferred-size: 77px;
+      flex-basis: 77px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  section.media figure:last-child {
+    -ms-flex-preferred-size: 129px;
+        flex-basis: 129px;
+  }
+}
+
+section.media img {
+  width: 100%;
+}
+
+/***********
+concatTab section
+************/
+section.contactTab {
+  width: 427px;
+  background: #2c344b;
+  border-radius: 28px;
+  border: none;
+  padding: 5px 5px 5px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  section.contactTab {
+    display: none;
+  }
+}
+
+section.contactTab input {
+  width: 60%;
+  background: #2c344b;
+  border-radius: 28px;
+  border: none;
+  padding: 15px 0 15px 32px;
+}
+
+section.contactTab input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  font-weight: 400;
+  opacity: 50%;
+  color: white;
+}
+
+section.contactTab input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  font-weight: 400;
+  opacity: 50%;
+  color: white;
+}
+
+section.contactTab input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  font-weight: 400;
+  opacity: 50%;
+  color: white;
+}
+
+section.contactTab input::placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  font-weight: 400;
+  opacity: 50%;
+  color: white;
+}
+
+section.contactTab button {
+  float: right;
+  width: 162px;
+  background-color: #54e6af;
+  padding: 9px 0;
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  border-radius: 28px;
+  border: none;
+  font-weight: 900;
+  text-align: center;
+  color: #121725;
+}
+
+/***********
+concatMob section
+************/
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  section.contactMob {
+    font-size: 48px;
+    line-height: 56px;
+    opacity: 100%;
+    display: none;
+  }
+}
+
+section.contactMob input {
+  width: 100%;
+  background: #2c344b;
+  border-radius: 28px;
+  border: none;
+  padding: 15px 0 15px 32px;
+  margin-bottom: 25px;
+}
+
+section.contactMob input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  font-weight: 400;
+  opacity: 50%;
+  color: white;
+}
+
+section.contactMob input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  font-weight: 400;
+  opacity: 50%;
+  color: white;
+}
+
+section.contactMob input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  font-weight: 400;
+  opacity: 50%;
+  color: white;
+}
+
+section.contactMob input::placeholder {
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  font-weight: 400;
+  opacity: 50%;
+  color: white;
+}
+
+section.contactMob button {
+  width: 100%;
+  background-color: #54e6af;
+  padding: 9px 0;
+  font-size: 14px;
+  line-height: 28px;
+  opacity: 100%;
+  border-radius: 28px;
+  border: none;
+  font-weight: 900;
+  text-align: center;
+  color: #121725;
+}
+
+/***********
+header part
+************/
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  footer {
+    background: #121725;
+    width: 100%;
+    display: block;
+    padding: 30px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  figure.dots {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
