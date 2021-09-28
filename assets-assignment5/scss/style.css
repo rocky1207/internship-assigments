@@ -342,6 +342,7 @@ form.contactTab button {
 
 form.contactTab button:hover {
   background: #B3FFE2;
+  cursor: pointer;
 }
 
 /***********

@@ -10,7 +10,6 @@
 </head>
 <body onload="start()">
     <header class="wrappBig">
-        
         <figure class="logo">
             <img src="desktop/logo.svg" alt="">
         </figure>
@@ -22,10 +21,11 @@
         <article class="desktop">
             <h1 class="h_one"><span>Publish your podcast</span>everywhere.</h1>
             <p class="p_main">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
-            <form class="contactTab">
-                <input type="email" name="email" placeholder="Email address">
+            <form class="contactTab contact">
+                <input class="input" type="text" name="email" placeholder="Email address">
                 <button type="submit">Request Access</button>
             </form>
+            <p class="check ignore"></p>
             <section class="media">
                 <figure>
                     <img src="desktop/spotify.svg" alt="">
@@ -41,10 +41,11 @@
                 </figure>
             </section>
         </article>
-        <form class="contactMob" onsubmit="validateForm(this)">
-            <input type="email" name="email" placeholder="Email address">
+        <form class="contactMob contact">
+            <input class="input" type="text" name="email" placeholder="Email address">
             <button type="submit">Request Access</button>
-        </form>   
+        </form>
+        <p class="check"></p>
     </main>
     <footer class="wrapp">
         <figure class="dots">

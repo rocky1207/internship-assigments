@@ -225,6 +225,7 @@ form.contactTab{
         color: $black;
         &:hover {
             background: #B3FFE2;
+            cursor: pointer;
         }
     }
 }
@@ -289,7 +290,6 @@ figure.dots {
 }
 figure.dots img {
     @media only screen and (min-width: 1275px) {
-        
-        margin-top: -57px;
+         margin-top: -57px;
     }
 }
