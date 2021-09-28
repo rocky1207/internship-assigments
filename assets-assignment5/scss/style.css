@@ -17,9 +17,16 @@ body {
   height: 100vh;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   body {
     background: #121725;
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  .wrappBig {
+    width: 1275px;
+    margin-right: 0;
   }
 }
 
@@ -28,9 +35,18 @@ body {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1274px) {
   .wrapp {
     width: 635px;
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  .desktop {
+    margin: 0;
+    background: #121725;
+    width: 723px;
+    padding: 88px 0 0 0;
   }
 }
 
@@ -41,9 +57,16 @@ header {
   padding: 62px 0 57px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1274px) {
   header {
     padding: 50px 0 152px 39px;
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  header {
+    margin-left: auto;
+    padding: 102px 0 0 0;
   }
 }
 
@@ -51,30 +74,49 @@ figure.logo {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1274px) {
   figure.logo {
     text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  figure.logo {
+    text-align: left;
+    margin-bottom: -28px;
   }
 }
 
 figure.logo img {
   width: 135px;
   height: 56px;
+  vertical-align: bottom;
 }
 
 /*************
 main part
-****************/
+***************/
 main {
   margin: 0 auto;
   text-align: center;
+  width: 327px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1274px) {
   main {
     padding-top: 93px;
     text-align: left;
     background: #121725;
+    width: 635px;
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  main {
+    background-image: url(../desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    text-align: left;
   }
 }
 
@@ -87,7 +129,7 @@ main h1 {
   padding-bottom: 16px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1274px) {
   main h1 {
     font-size: 48px;
     line-height: 56px;
@@ -96,12 +138,22 @@ main h1 {
   }
 }
 
-figure.backImg {
+@media only screen and (min-width: 1275px) {
+  main h1 {
+    width: 665px;
+    font-size: 52px;
+    line-height: 62px;
+    opacity: 100%;
+    padding-bottom: 24px;
+  }
+}
+
+figure.backImgTab {
   display: none;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  figure.backImg {
+@media only screen and (min-width: 768px) and (max-width: 1274px) {
+  figure.backImgTab {
     display: block;
     position: absolute;
     top: 0;
@@ -126,7 +178,7 @@ p.p_main {
   padding-bottom: 33px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   p.p_main {
     width: 445px;
     font-size: 18px;
@@ -153,7 +205,7 @@ section.media {
   padding-bottom: 48px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   section.media {
     width: 536px;
     padding-top: 64px;
@@ -165,7 +217,7 @@ section.media figure:first-child {
       flex-basis: 56px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   section.media figure:first-child {
     -ms-flex-preferred-size: 96px;
         flex-basis: 96px;
@@ -177,14 +229,14 @@ section.media figure:nth-child(2) {
       flex-basis: 45px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   section.media figure:nth-child(2) {
     -ms-flex-preferred-size: 78px;
         flex-basis: 78px;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   section.media figure:nth-child(3) {
     -ms-flex-preferred-size: 125px;
         flex-basis: 125px;
@@ -196,7 +248,7 @@ section.media figure:last-child {
       flex-basis: 77px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
   section.media figure:last-child {
     -ms-flex-preferred-size: 129px;
         flex-basis: 129px;
@@ -283,10 +335,14 @@ section.contactTab button {
   color: #121725;
 }
 
+section.contactTab button:hover {
+  background: #B3FFE2;
+}
+
 /***********
-concatMob section
+contactMob section
 ************/
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
+@media only screen and (min-width: 767px) {
   section.contactMob {
     font-size: 48px;
     line-height: 56px;
@@ -354,10 +410,14 @@ section.contactMob button {
   color: #121725;
 }
 
+section.contactMob button:hover {
+  background: #B3FFE2;
+}
+
 /***********
 header part
 ************/
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1274px) {
   footer {
     background: #121725;
     width: 100%;
@@ -366,9 +426,28 @@ header part
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 1275px) {
+  footer {
+    width: 100%;
+    margin: 0 0 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
   figure.dots {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  figure.dots {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 1275px) {
+  figure.dots img {
+    margin-top: -57px;
   }
 }
 /*# sourceMappingURL=style.css.map */

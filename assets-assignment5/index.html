@@ -4,21 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Assets assignment 5</title>
-    <!--<script src="js/script.js"></script>-->
+    <script src="js/script.js"></script>
     <link rel="icon" type="image/png" href="favicon-32x32.png"/>
     <link rel="stylesheet" href="scss/style.css">
 </head>
-<body>
-    <header>
+<body onload="start()">
+    <header class="wrappBig">
         
         <figure class="logo">
             <img src="desktop/logo.svg" alt="">
         </figure>
     </header>
     <main class="wrapp">
-        <figure class="backImg">
+        <figure class="backImgTab">
             <img src="tablet/image-host.jpg" alt="">
         </figure>
+        <article class="desktop">
         <h1 class="h_one"><span>Publish your podcast</span>everywhere.</h1>
         <p class="p_main">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
         <section class="contactTab">
@@ -39,6 +40,7 @@
                 <img src="desktop/pocket-casts.svg" alt="">
             </figure>
         </section>
+    </article>
         <section class="contactMob">
             <input type="email" name="email" placeholder="Email address">
             <button type="submit">Request Access</button>

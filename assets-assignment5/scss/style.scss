@@ -19,15 +19,29 @@ body {
     background-position: center top;
     background-size: cover;
     height: 100vh;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) {
         background: $black;
+    }
+}
+.wrappBig {
+    @media only screen and (min-width: 1275px) {
+        width: 1275px;
+        margin-right: 0;
     }
 }
 .wrapp {
     width: 327px;
     margin: 0 auto;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
-        width:635px;
+    @media only screen and (min-width: 768px) and (max-width: 1274px) {
+        width: 635px;
+    }
+}
+.desktop {
+    @media only screen and (min-width: 1275px) {
+        margin: 0;
+        background: $black;
+        width: 723px;
+        padding: 88px 0 0 0;
     }
 }
 @mixin font($fontSize, $lineHeight, $opacity:100%) {
@@ -45,45 +59,70 @@ header part
 ************/
 header {
     padding: 62px 0 57px;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1274px) {
         padding: 50px 0 152px 39px;
+    }
+    @media only screen and (min-width: 1275px) {
+        margin-left: auto;
+        padding: 102px 0 0 0;
     }
 }
 figure.logo {
     text-align: center;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    @media only screen and (min-width: 768px) and (max-width: 1274px) {
         text-align: left;
+    }
+    @media only screen and (min-width: 1275px) {
+        text-align: left;
+        margin-bottom: -28px;
     }
     img {
         width: 135px;
         height: 56px;
+        vertical-align: bottom;
     }
 }
 /*************
 main part
-****************/
+***************/
 main {
     margin: 0 auto;
     text-align: center;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    width: 327px;
+    @media only screen and (min-width: 768px) and (max-width: 1274px) {
         padding-top: 93px;
         text-align: left;
         background: $black;
+        width: 635px;
+    }
+    @media only screen and (min-width: 1275px) {
+        background-image: url(../desktop/image-host.jpg);
+        background-repeat: no-repeat;
+        background-position: right top;
+        //background-size: cover;
+        text-align: left;
+        //margin: auto;
     }
     h1 {
         text-transform: uppercase;
         @include font(26px, 38px);
         font-weight: 300;
         padding-bottom: 16px;
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @media only screen and (min-width: 768px) and (max-width: 1274px) {
             @include font(48px, 56px);
             padding-bottom: 31px;
         }
+        @media only screen and (min-width: 1275px) {
+            width: 665px;
+            @include font(52px, 62px);
+            padding-bottom: 24px;
+        }
     }
 }
-figure.backImg {
+figure.backImgTab {
     display: none;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1274px) {
         display: block;
         position: absolute;
         top: 0;
@@ -102,7 +141,7 @@ p.p_main {
     color: $lightGrey;
     font-weight: 400;
     padding-bottom: 33px;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) {
         width: 445px;
         @include font(18px, 28px);
     }
@@ -116,30 +155,30 @@ section.media {
     flex-wrap: nowrap;
     align-items: center;
     padding-bottom: 48px;
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) {
         width: 536px;
         padding-top: 64px;
     }
     figure:first-child {
         flex-basis: 56px;
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @media only screen and (min-width: 768px) {
             flex-basis: 96px;
         }
     }
     figure:nth-child(2) {
         flex-basis: 45px;
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @media only screen and (min-width: 768px) {
             flex-basis: 78px;
         }
     }
     figure:nth-child(3) {
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @media only screen and (min-width: 768px) {
             flex-basis: 125px;
         }
     }
     figure:last-child {
         flex-basis: 77px;
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        @media only screen and (min-width: 768px) {
             flex-basis: 129px;
         }
     }
@@ -182,13 +221,16 @@ section.contactTab{
         font-weight: 900;
         text-align: center;
         color: $black;
+        &:hover {
+            background: #B3FFE2;
+        }
     }
 }
 /***********
-concatMob section
+contactMob section
 ************/
 section.contactMob {
-    @media only screen and (min-width: 767px) and (max-width: 1024px) {
+    @media only screen and (min-width: 767px) {
         @include font(48px, 56px);
         display: none;
     }
@@ -214,21 +256,37 @@ section.contactMob {
         font-weight: 900;
         text-align: center;
         color: $black;
+        &:hover {
+            background: #B3FFE2;
+        }
     }
 }
 /***********
 header part
 ************/
 footer {
-    @media only screen and (min-width: 767px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1274px) {
         background: $black;
         width: 100%;
         display: block;
         padding: 30px 0 0 0;
     }
+    @media only screen and (min-width: 1275px) {
+       width: 100%;
+       margin: 0 0 0 auto;
+    }
 }
 figure.dots {
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 767px) {
         display: none;
+    }
+    @media only screen and (min-width: 1275px) {
+        text-align: right;
+    }
+}
+figure.dots img {
+    @media only screen and (min-width: 1275px) {
+        
+        margin-top: -57px;
     }
 }
