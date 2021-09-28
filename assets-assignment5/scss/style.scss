@@ -189,7 +189,7 @@ section.media img {
 /***********
 concatTab section
 ************/
-section.contactTab{
+form.contactTab{
     @media only screen and (max-width: 767px) { 
         display: none;
     }
@@ -204,7 +204,7 @@ section.contactTab{
         border-radius: 28px;
         border: none;
         padding: 15px 0 15px 32px;
-        //margin-bottom: 25px;
+        color: $white;
     }
     input::placeholder {
         @include font(14px,28px);
@@ -229,7 +229,7 @@ section.contactTab{
 /***********
 contactMob section
 ************/
-section.contactMob {
+form.contactMob {
     @media only screen and (min-width: 767px) {
         @include font(48px, 56px);
         display: none;
@@ -241,6 +241,7 @@ section.contactMob {
         border: none;
         padding: 15px 0 15px 32px;
         margin-bottom: 25px;
+        color: $white;
     }
     input::placeholder {
         @include font(14px,28px);

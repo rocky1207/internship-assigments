@@ -262,7 +262,7 @@ section.media img {
 /***********
 concatTab section
 ************/
-section.contactTab {
+form.contactTab {
   width: 427px;
   background: #2c344b;
   border-radius: 28px;
@@ -271,20 +271,21 @@ section.contactTab {
 }
 
 @media only screen and (max-width: 767px) {
-  section.contactTab {
+  form.contactTab {
     display: none;
   }
 }
 
-section.contactTab input {
+form.contactTab input {
   width: 60%;
   background: #2c344b;
   border-radius: 28px;
   border: none;
   padding: 15px 0 15px 32px;
+  color: white;
 }
 
-section.contactTab input::-webkit-input-placeholder {
+form.contactTab input::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 28px;
   opacity: 100%;
@@ -293,7 +294,7 @@ section.contactTab input::-webkit-input-placeholder {
   color: white;
 }
 
-section.contactTab input:-ms-input-placeholder {
+form.contactTab input:-ms-input-placeholder {
   font-size: 14px;
   line-height: 28px;
   opacity: 100%;
@@ -302,7 +303,7 @@ section.contactTab input:-ms-input-placeholder {
   color: white;
 }
 
-section.contactTab input::-ms-input-placeholder {
+form.contactTab input::-ms-input-placeholder {
   font-size: 14px;
   line-height: 28px;
   opacity: 100%;
@@ -311,7 +312,7 @@ section.contactTab input::-ms-input-placeholder {
   color: white;
 }
 
-section.contactTab input::placeholder {
+form.contactTab input::placeholder {
   font-size: 14px;
   line-height: 28px;
   opacity: 100%;
@@ -320,7 +321,7 @@ section.contactTab input::placeholder {
   color: white;
 }
 
-section.contactTab button {
+form.contactTab button {
   float: right;
   width: 162px;
   background-color: #54e6af;
@@ -335,7 +336,7 @@ section.contactTab button {
   color: #121725;
 }
 
-section.contactTab button:hover {
+form.contactTab button:hover {
   background: #B3FFE2;
 }
 
@@ -343,7 +344,7 @@ section.contactTab button:hover {
 contactMob section
 ************/
 @media only screen and (min-width: 767px) {
-  section.contactMob {
+  form.contactMob {
     font-size: 48px;
     line-height: 56px;
     opacity: 100%;
@@ -351,16 +352,17 @@ contactMob section
   }
 }
 
-section.contactMob input {
+form.contactMob input {
   width: 100%;
   background: #2c344b;
   border-radius: 28px;
   border: none;
   padding: 15px 0 15px 32px;
   margin-bottom: 25px;
+  color: white;
 }
 
-section.contactMob input::-webkit-input-placeholder {
+form.contactMob input::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 28px;
   opacity: 100%;
@@ -369,7 +371,7 @@ section.contactMob input::-webkit-input-placeholder {
   color: white;
 }
 
-section.contactMob input:-ms-input-placeholder {
+form.contactMob input:-ms-input-placeholder {
   font-size: 14px;
   line-height: 28px;
   opacity: 100%;
@@ -378,7 +380,7 @@ section.contactMob input:-ms-input-placeholder {
   color: white;
 }
 
-section.contactMob input::-ms-input-placeholder {
+form.contactMob input::-ms-input-placeholder {
   font-size: 14px;
   line-height: 28px;
   opacity: 100%;
@@ -387,7 +389,7 @@ section.contactMob input::-ms-input-placeholder {
   color: white;
 }
 
-section.contactMob input::placeholder {
+form.contactMob input::placeholder {
   font-size: 14px;
   line-height: 28px;
   opacity: 100%;
@@ -396,7 +398,7 @@ section.contactMob input::placeholder {
   color: white;
 }
 
-section.contactMob button {
+form.contactMob button {
   width: 100%;
   background-color: #54e6af;
   padding: 9px 0;
@@ -410,7 +412,7 @@ section.contactMob button {
   color: #121725;
 }
 
-section.contactMob button:hover {
+form.contactMob button:hover {
   background: #B3FFE2;
 }
 
