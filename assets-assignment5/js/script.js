@@ -9,4 +9,17 @@ function start() {
         footer[0].setAttribute('class', 'wrappBig');
     }
 }
+function validateForm(f) {
+    if(f.email.value != '') {
+        var p = document.createElement('p');
+        var form = document.getElementsByTagName('form');
+        
+        p.innerHTML = 'Kralju';
+        p.style.color = '#fff';
+        form[0].appendChild(p);
+        
+       //alert('Kralju');
+    }
+    //return true;
+}
 

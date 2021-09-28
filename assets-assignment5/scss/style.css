@@ -27,6 +27,7 @@ body {
   .wrappBig {
     width: 1275px;
     margin-right: 0;
+    position: relative;
   }
 }
 
@@ -42,11 +43,13 @@ body {
 }
 
 @media only screen and (min-width: 1275px) {
-  .desktop {
+  article.desktop {
     margin: 0;
     background: #121725;
     width: 723px;
-    padding: 88px 0 0 0;
+    vertical-align: bottom;
+    position: absolute;
+    top: 133px;
   }
 }
 
@@ -117,6 +120,7 @@ main {
     background-repeat: no-repeat;
     background-position: right top;
     text-align: left;
+    height: 640px;
   }
 }
 
@@ -144,7 +148,7 @@ main h1 {
     font-size: 52px;
     line-height: 62px;
     opacity: 100%;
-    padding-bottom: 24px;
+    padding: 88px 0 24px 0;
   }
 }
 

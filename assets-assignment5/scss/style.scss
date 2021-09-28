@@ -27,6 +27,7 @@ body {
     @media only screen and (min-width: 1275px) {
         width: 1275px;
         margin-right: 0;
+        position: relative;
     }
 }
 .wrapp {
@@ -36,12 +37,14 @@ body {
         width: 635px;
     }
 }
-.desktop {
+article.desktop {
     @media only screen and (min-width: 1275px) {
         margin: 0;
         background: $black;
         width: 723px;
-        padding: 88px 0 0 0;
+        vertical-align: bottom;
+        position: absolute;
+        top: 133px;
     }
 }
 @mixin font($fontSize, $lineHeight, $opacity:100%) {
@@ -100,9 +103,8 @@ main {
         background-image: url(../desktop/image-host.jpg);
         background-repeat: no-repeat;
         background-position: right top;
-        //background-size: cover;
         text-align: left;
-        //margin: auto;
+        height: 640px;
     }
     h1 {
         text-transform: uppercase;
@@ -116,7 +118,7 @@ main {
         @media only screen and (min-width: 1275px) {
             width: 665px;
             @include font(52px, 62px);
-            padding-bottom: 24px;
+            padding: 88px 0 24px 0;
         }
     }
 }
