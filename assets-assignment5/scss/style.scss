@@ -207,6 +207,9 @@ form.contactTab{
         border: none;
         padding: 15px 0 15px 32px;
         color: $white;
+        &:focus {
+            outline-style: none;
+        }
     }
     input::placeholder {
         @include font(14px,28px);
@@ -245,6 +248,9 @@ form.contactMob {
         padding: 15px 0 15px 32px;
         margin-bottom: 25px;
         color: $white;
+        &:focus {
+            outline-style: none;
+        }
     }
     input::placeholder {
         @include font(14px,28px);

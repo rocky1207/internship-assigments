@@ -289,6 +289,10 @@ form.contactTab input {
   color: white;
 }
 
+form.contactTab input:focus {
+  outline-style: none;
+}
+
 form.contactTab input::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 28px;
@@ -365,6 +369,10 @@ form.contactMob input {
   padding: 15px 0 15px 32px;
   margin-bottom: 25px;
   color: white;
+}
+
+form.contactMob input:focus {
+  outline-style: none;
 }
 
 form.contactMob input::-webkit-input-placeholder {
