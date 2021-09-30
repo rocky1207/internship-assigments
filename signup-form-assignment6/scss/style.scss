@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+$pink: #FF7979;
+$green: #38CC8B;
+$blue: #5E54A4;
+$darkBlue: #3D3B48;
+$grey: #BAB7D4;
+$white: #fff;
+$fontFamily: 'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin font ($fontSize, $fontWeight, $lineHeight, $color:$white) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $color;
+}
+body {
+    background-color: $pink;
+    height: 100vh;
+    font-family: $fontFamily;
+}
+section {
+    background: url(../images/bg-intro-desktop.png);
+    width: 100%;
+    padding-top: 88px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 68px;
+    @media only screen and (min-width: 1299px) {
+        justify-content: center;
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-top: 121px;
+    }
+    
+}
+article.first {
+    width: 327px;
+    text-align: center;
+    padding-bottom: 64px;
+    @media only screen and (min-width: 768px) {
+        width: 525px;
+    }
+    @media only screen and (min-width: 1299px) {
+        margin-right: 23px;
+        text-align: left;
+        padding-bottom: 0;
+    }
+    h2 {
+        @include font (28px, 700, 36px);
+        letter-spacing: -0.291667px;
+        padding-bottom: 16px;
+        @media only screen and (min-width: 768px) {
+            @include font (50px, 700, 55px);
+            letter-spacing: -0.520833px;
+        }
+    }
+    p {
+        @include font (16px, 500, 26px);
+    }
+}
+article.second {
+    width: 327px;
+    @media only screen and (min-width: 768px) {
+        width: 540px;
+    }
+    @media only screen and (min-width: 1299px) {
+        margin-left: 22px;
+    }
+}
+div.trial {
+    background: $blue;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+    border-radius: 10px;
+    text-align: center;
+    padding: 18px 66px;
+    margin-bottom: 24px;
+    @media only screen and (min-width: 768px) {
+        width: 540px;
+        padding: 17px 66px;
+    }
+    p {
+        @include font (15px, 500, 26px);
+        letter-spacing: 0.27px;
+        span {
+            @include font (15px, 400, 26px);
+            opacity: .7;
+        }
+    }
+}
+.mainForm {
+    background: $white;
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+    text-align: center;
+    padding: 24px 0;
+     @media only screen and (min-width: 768px) {
+        padding: 40px 0;
+    }
+    input {
+        display: block;
+        margin: 0 auto 16px auto;
+        width: 279px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        padding: 15px 0 15px 19px;
+        @media only screen and (min-width: 768px) {
+            width: 460px;
+            margin: 0 auto 20px auto;
+            padding: 15px 0 15px 32px;
+        }
+        input::placeholder {
+            @include font (14px, 600, 26px, $darkBlue);
+            letter-spacing: 0.25px;
+        }
+    }
+    button {
+        width: 279px;
+        background: $green;
+        box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+        border: none;
+        border-radius: 5px;
+        padding: 15px 0;
+        @include font (15px, 600, 26px);
+        letter-spacing: 1px;
+        @media only screen and (min-width: 768px) {
+            width: 460px;
+        }
+        &:hover {
+            background: #77E2B3;
+        }
+    }
+    p {
+        width: 249px;
+        margin: 0 auto;
+        @include font (11px, 500, 21px, $grey);
+        @media only screen and (min-width: 768px) {
+            width: 369px;
+            @include font (11px, 500, 26px, $grey);
+        }
+        span {
+            @include font (11px, 700, 21px, $pink);
+            @media only screen and (min-width: 768px) {
+                @include font (11px, 700, 26px, $pink);
+            }
+        }
+    }
+}
+/*
+article:first-child {
+    width: 525px;
+    text-align: left;
+    h2 {
+        @include font (55px, 700, 55px);
+        letter-spacing: -0.520833px;
+    }
+    p {
+        @include font (16px, 500, 26px);
+    }
+}
+article:last-child {
+    width: 540px;
+    div {
+        background: $blue;
+        box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+        border-radius: 10px;
+        text-align: center;
+        padding: 17px 0;
+        margin-bottom: 24px;
+    }
+}
+*/
