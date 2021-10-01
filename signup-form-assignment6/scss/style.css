@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -15,16 +16,31 @@ section {
   background: url(../images/bg-intro-desktop.png);
   width: 100%;
   padding-top: 88px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-bottom: 68px;
 }
+
 @media only screen and (min-width: 1299px) {
   section {
-    justify-content: center;
-    flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding-bottom: 0;
     padding-top: 121px;
   }
@@ -35,11 +51,13 @@ article.first {
   text-align: center;
   padding-bottom: 64px;
 }
+
 @media only screen and (min-width: 768px) {
   article.first {
     width: 525px;
   }
 }
+
 @media only screen and (min-width: 1299px) {
   article.first {
     margin-right: 23px;
@@ -47,6 +65,7 @@ article.first {
     padding-bottom: 0;
   }
 }
+
 article.first h2 {
   font-size: 28px;
   font-weight: 700;
@@ -55,6 +74,7 @@ article.first h2 {
   letter-spacing: -0.291667px;
   padding-bottom: 16px;
 }
+
 @media only screen and (min-width: 768px) {
   article.first h2 {
     font-size: 50px;
@@ -64,6 +84,7 @@ article.first h2 {
     letter-spacing: -0.520833px;
   }
 }
+
 article.first p {
   font-size: 16px;
   font-weight: 500;
@@ -74,11 +95,13 @@ article.first p {
 article.second {
   width: 327px;
 }
+
 @media only screen and (min-width: 768px) {
   article.second {
     width: 540px;
   }
 }
+
 @media only screen and (min-width: 1299px) {
   article.second {
     margin-left: 22px;
@@ -87,18 +110,21 @@ article.second {
 
 div.trial {
   background: #5E54A4;
-  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  -webkit-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+          box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
   border-radius: 10px;
   text-align: center;
   padding: 18px 66px;
   margin-bottom: 24px;
 }
+
 @media only screen and (min-width: 768px) {
   div.trial {
     width: 540px;
     padding: 17px 66px;
   }
 }
+
 div.trial p {
   font-size: 15px;
   font-weight: 500;
@@ -106,52 +132,113 @@ div.trial p {
   color: #fff;
   letter-spacing: 0.27px;
 }
+
 div.trial p span {
   font-size: 15px;
   font-weight: 400;
   line-height: 26px;
   color: #fff;
-  opacity: 0.7;
+  opacity: .7;
+}
+
+.error {
+  display: block;
+}
+
+.noError {
+  display: none;
 }
 
 .mainForm {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  -webkit-box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+          box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
   text-align: center;
   padding: 24px 0;
 }
+
 @media only screen and (min-width: 768px) {
   .mainForm {
     padding: 40px 0;
   }
 }
-.mainForm input {
-  display: block;
-  margin: 0 auto 16px auto;
+
+.mainForm div.input {
   width: 279px;
-  border: 1px solid #BAB7D4;
-  border-radius: 5px;
-  padding: 15px 0 15px 19px;
+  margin: 0 auto 16px auto;
+  position: relative;
 }
+
 @media only screen and (min-width: 768px) {
-  .mainForm input {
+  .mainForm div.input {
     width: 460px;
     margin: 0 auto 20px auto;
-    padding: 15px 0 15px 32px;
   }
 }
-.mainForm input input::placeholder {
+
+.mainForm div.input img {
+  position: absolute;
+  top: 16px;
+  right: 12px;
+}
+
+.mainForm div.input input {
+  width: 100%;
+  border: 1px solid #BAB7D4;
+  border-radius: 5px;
+  padding: 19px 0 19px 19px;
+}
+
+@media only screen and (min-width: 768px) {
+  .mainForm div.input input {
+    width: 100%;
+    padding: 19px 0 19px 32px;
+  }
+}
+
+.mainForm div.input input input::-webkit-input-placeholder {
   font-size: 14px;
   font-weight: 600;
   line-height: 26px;
   color: #3D3B48;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.26px;
 }
+
+.mainForm div.input input input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #3D3B48;
+  letter-spacing: 0.26px;
+}
+
+.mainForm div.input input input::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #3D3B48;
+  letter-spacing: 0.26px;
+}
+
+.mainForm div.input input input::placeholder {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #3D3B48;
+  letter-spacing: 0.26px;
+}
+
+.mainForm div.input p.notification {
+  width: 100%;
+  text-align: right;
+}
+
 .mainForm button {
   width: 279px;
   background: #38CC8B;
-  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  -webkit-box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+          box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
   border: none;
   border-radius: 5px;
   padding: 15px 0;
@@ -161,14 +248,17 @@ div.trial p span {
   color: #fff;
   letter-spacing: 1px;
 }
+
 @media only screen and (min-width: 768px) {
   .mainForm button {
     width: 460px;
   }
 }
+
 .mainForm button:hover {
   background: #77E2B3;
 }
+
 .mainForm p {
   width: 249px;
   margin: 0 auto;
@@ -177,6 +267,7 @@ div.trial p span {
   line-height: 21px;
   color: #BAB7D4;
 }
+
 @media only screen and (min-width: 768px) {
   .mainForm p {
     width: 369px;
@@ -186,12 +277,14 @@ div.trial p span {
     color: #BAB7D4;
   }
 }
+
 .mainForm p span {
   font-size: 11px;
   font-weight: 700;
   line-height: 21px;
   color: #FF7979;
 }
+
 @media only screen and (min-width: 768px) {
   .mainForm p span {
     font-size: 11px;
@@ -200,30 +293,4 @@ div.trial p span {
     color: #FF7979;
   }
 }
-
-/*
-article:first-child {
-    width: 525px;
-    text-align: left;
-    h2 {
-        @include font (55px, 700, 55px);
-        letter-spacing: -0.520833px;
-    }
-    p {
-        @include font (16px, 500, 26px);
-    }
-}
-article:last-child {
-    width: 540px;
-    div {
-        background: $blue;
-        box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
-        border-radius: 10px;
-        text-align: center;
-        padding: 17px 0;
-        margin-bottom: 24px;
-    }
-}
-*/
-
 /*# sourceMappingURL=style.css.map */

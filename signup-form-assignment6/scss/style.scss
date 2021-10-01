@@ -37,7 +37,6 @@ section {
         padding-bottom: 0;
         padding-top: 121px;
     }
-    
 }
 article.first {
     width: 327px;
@@ -93,6 +92,13 @@ div.trial {
         }
     }
 }
+.error {
+    display: block;
+}
+.noError {
+    display: none;
+}
+
 .mainForm {
     background: $white;
     border-radius: 10px;
@@ -102,22 +108,39 @@ div.trial {
      @media only screen and (min-width: 768px) {
         padding: 40px 0;
     }
-    input {
-        display: block;
-        margin: 0 auto 16px auto;
+    div.input {
         width: 279px;
-        border: 1px solid $grey;
-        border-radius: 5px;
-        padding: 15px 0 15px 19px;
+        margin: 0 auto 16px auto;
+        position: relative;
         @media only screen and (min-width: 768px) {
             width: 460px;
             margin: 0 auto 20px auto;
-            padding: 15px 0 15px 32px;
         }
-        input::placeholder {
-            @include font (14px, 600, 26px, $darkBlue);
-            letter-spacing: 0.25px;
+        img {
+            position: absolute;
+            top: 16px;
+            right: 12px;
         }
+        input {
+            width: 100%;
+            border: 1px solid $grey;
+            border-radius: 5px;
+            padding: 19px 0 19px 19px;
+            
+            @media only screen and (min-width: 768px) {
+                width: 100%;
+                //margin: 0 auto 20px auto;
+                padding: 19px 0 19px 32px;
+            }
+            input::placeholder {
+                @include font (14px, 600, 26px, $darkBlue);
+                letter-spacing: 0.26px;
+            }
+    }
+    p.notification {
+        width: 100%;
+        text-align: right;
+    }
     }
     button {
         width: 279px;
@@ -151,27 +174,3 @@ div.trial {
         }
     }
 }
-/*
-article:first-child {
-    width: 525px;
-    text-align: left;
-    h2 {
-        @include font (55px, 700, 55px);
-        letter-spacing: -0.520833px;
-    }
-    p {
-        @include font (16px, 500, 26px);
-    }
-}
-article:last-child {
-    width: 540px;
-    div {
-        background: $blue;
-        box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
-        border-radius: 10px;
-        text-align: center;
-        padding: 17px 0;
-        margin-bottom: 24px;
-    }
-}
-*/

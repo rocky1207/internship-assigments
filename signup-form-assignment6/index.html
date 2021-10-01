@@ -8,26 +8,41 @@
     <link rel="icon" type="image/png" href="images/favicon-32x32.png"/>
     <link rel="stylesheet" href="scss/style.css">
 </head>
-<body>
+<body onload="start()">
     <section>
         <article class="first">
             <h2>Learn to code by<br>watching others</h2>
             <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
-       </article>
-       <article class="second">
-           <div class="trial">
+        </article>
+        <article class="second">
+            <div class="trial">
                <p>Try it free 7 days <span>then $20/mo. thereafter</span> </p>
-           </div>
-           <form class="mainForm" action="" method="">
-               <input type="text" name="fname" placeholder="First Name">
-               <input type="text" name="lname" placeholder="Last Name">
-               <input type="text" name="email" placeholder="Email Address">
-               <input type="text" name="password" placeholder="Password">
-               <button type="submit">CLAIM YOUR FREE TRIAL</button>
-               <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>  
-           </form>
-       </article>
+            </div>
+            <form class="mainForm" action="" method="">
+                <div class="input">
+                    <img name="img" class="noError" src="images/icon-error.svg" alt="">
+                    <input type="text" name="fname" placeholder="First Name">
+                    <p class="notification"></p>
+                </div>
+                <div class="input">
+                    <img name="img" class="noError" src="images/icon-error.svg" alt="">
+                    <input type="text" name="lname" placeholder="Last Name">
+                    <p class="notification"></p>
+                </div>
+                <div class="input" >
+                    <img name="img" class="noError" src="images/icon-error.svg" alt="">
+                    <input type="text" name="email" placeholder="Email Address">
+                    <p class="notification"></p>
+                </div>
+                <div class="input">
+                    <img name="img" class="noError" src="images/icon-error.svg" alt="">
+                    <input type="text" name="password" placeholder="Password">
+                    <p class="notification"></p>
+                </div>
+                <button class="button" type="submit">CLAIM YOUR FREE TRIAL</button>
+                <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>  
+            </form>
+        </article>
     </section>
-    
-</body>
+ </body>
 </html>
