@@ -15,7 +15,8 @@
             <div class="upperSmall">
                 <p id="dark" class="white">dark</p>
                 <figure>
-                    <img id="switch" src="assets/icon-moon.svg" alt="moon">
+                    <img id="switch1" src="assets/icon-moon.svg" alt="moon">
+                    <img id="switch2" src="assets/icon-sun.svg" alt="sun">
                 </figure>
             </div>
         </div>
@@ -23,42 +24,47 @@
             <figure>
                 <img src="assets/icon-search.svg" alt="search">
             </figure>
+            
+         <form class="mainForm" action="">  
             <input type="text" placeholder="Search GitHub username...">
-            <p></p>
-            <button type="submit">Search</button>
+            <p class="searchResult"></p>
+            <button class="bttn" type="submit">Search</button>
+           </form>
+            
         </div>
+        <p class="searchResult"></p> 
     </header>
     <main>
         <figure class="pic">
-            <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="avatar">
+            <img class="avatar" src="" alt="avatar">
         </figure>
         <section>
             <article class="big">
                 <div class="hTwo">
-                    <h2>The Octocat</h2>
-                    <p>@octocat</p>
-                    <p>Joined 25 Jan 2011</p>
+                    <h2 class="hTwo_dinamic"></h2>
+                    <a class="hTwo_dinamic" >@octocat</a>
+                    <p class="hTwo_dinamic"></p>
                 </div>
                 <div class="text">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+                    <p class="text_dinamic">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
                 </div>
             </article>
             <article class="inform">
-                <p>Repos<span>8</span></p>
-                <p>Followers<span>3938</span></p>
-                <p>Following<span>9</span></p>
+                <p>Repos<span class="numbers"></span></p>
+                <p>Followers<span class="numbers"></span></p>
+                <p>Following<span class="numbers"></span></p>
             </article>
             <article class="social">
                 <div class="upperSocial">
-                    <p><span><img class="socialImg" src="assets/icon-location.svg" alt=""></span><a class="link" href="">San Francisco</a></p>
-                    <p><span><img class="socialImg" src="assets/icon-website.svg" alt=""></span><a class="link"href="">https://github.blog</a></p>
+                    <p><span><img class="socialImg" src="assets/icon-location.svg" alt=""></span><span id="alone"></span></p>
+                    <p><span><img class="socialImg" src="assets/icon-website.svg" alt=""></span><a class="link"href=""></a></p>
                 </div>
                 <div class="downSocial">
-                    <p><span><img class="socialImg" src="assets/icon-twitter.svg" alt=""></span><a class="link" href="">Not Available</a></p>
-                    <p><span><img class="socialImg" src="assets/icon-company.svg" alt=""></span><a class="link" href="">@github</a></p>
+                    <p><span><img class="socialImg" src="assets/icon-twitter.svg" alt=""></span><a class="link" href=""></a></p>
+                    <p><span><img class="socialImg change" src="assets/icon-company.svg" alt=""></span><a class="link" href=""></a></p>
                 </div>
             </article>
         </section>
     </main>
- </body>
+</body>
 </html>

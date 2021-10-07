@@ -28,7 +28,7 @@ img {
   vertical-align: bottom;
 }
 
-/***********
+/*************
 header part
 **************/
 header {
@@ -142,6 +142,68 @@ header img {
   }
 }
 
+header .mainForm {
+  -ms-flex-preferred-size: 275px;
+      flex-basis: 275px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header .mainForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 480px;
+        flex-basis: 480px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header .mainForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 650px;
+        flex-basis: 650px;
+  }
+}
+
+header #switch2 {
+  display: none;
+}
+
 header input {
   border: none;
   font-size: 13px;
@@ -151,6 +213,7 @@ header input {
   color: #4b6a9b;
   -ms-flex-preferred-size: 184px;
       flex-basis: 184px;
+  outline: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -162,6 +225,37 @@ header input {
     color: #4b6a9b;
     -ms-flex-preferred-size: 254px;
         flex-basis: 254px;
+  }
+}
+
+header .searchResult {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: normal;
+  color: #f74646;
+  padding-left: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header .searchResult {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: normal;
+    color: #f74646;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header .searchResult {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: normal;
+    color: #f74646;
+    padding-left: 150px;
   }
 }
 
@@ -335,16 +429,17 @@ div.hTwo h2 {
   }
 }
 
-div.hTwo p {
+div.hTwo a {
   font-size: 13px;
   font-weight: 400;
   line-height: 19px;
   letter-spacing: normal;
   color: #0079ff;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
-  div.hTwo p {
+  div.hTwo a {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -535,6 +630,30 @@ article.social {
   }
 }
 
+article.social span#alone {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: normal;
+  color: #4b6a9b;
+  text-transform: none;
+  width: 120px;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  article.social span#alone {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: normal;
+    color: #4b6a9b;
+    text-transform: none;
+    width: 120px;
+    text-align: left;
+  }
+}
+
 article.social p {
   margin-bottom: 16px;
 }
@@ -584,7 +703,7 @@ article.social span img {
   height: 100%;
 }
 
-article.social div.downSocial p:first-child {
+article.social .opacity {
   opacity: 0.5;
 }
 
@@ -625,6 +744,14 @@ dark mode settings
   color: #fff;
 }
 
+.darkBckg #switch1 {
+  display: none;
+}
+
+.darkBckg #switch2 {
+  display: block;
+}
+
 .darkBckg .lowerHead {
   background: #2b3442;
   -webkit-box-shadow: none;
@@ -634,6 +761,7 @@ dark mode settings
 
 .darkBckg .lowerHead input {
   background: #2b3442;
+  color: #fff;
 }
 
 .darkBckg .lowerHead input::-webkit-input-placeholder {
@@ -653,7 +781,7 @@ dark mode settings
 }
 
 .darkBckg .lowerHead button {
-  background-color: #0079FF;
+  background-color: #0079ff;
 }
 
 .darkBckg main {
@@ -684,6 +812,10 @@ dark mode settings
 }
 
 .darkBckg a.link {
+  color: #fff;
+}
+
+.darkBckg .social span#alone {
   color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

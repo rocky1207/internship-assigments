@@ -1,1 +1,7 @@
 /github-search.fig
+node_modules
+/.prettierrc
+asdasd.json
+bbb.json
+package-lock.json
+package.json

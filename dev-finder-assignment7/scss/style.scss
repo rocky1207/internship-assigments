@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 $blue: #0079ff;
 $darkBlue: #1e2a47;
 $nightBlue1: #222731;
@@ -8,364 +8,414 @@ $grey: #697c9a;
 $almostWhite: #fefefe;
 $lightWhite: #f6f8ff;
 $white: #fff;
-$fontFamily: "Space Mono", monospace;
+$fontFamily: 'Space Mono', monospace;
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: $fontFamily;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $fontFamily;
 }
 body {
-  background: $lightWhite;
-  padding-top: 31px;
-  
-  @media only screeen and (min-width: 768px) and (max-width: 1023px) {
-    padding-top: 140px;
-   
-  }
-  @media only screen and (min-width: 1024px) {
-    padding-top: 144px;
-  }
+    background: $lightWhite;
+    padding-top: 31px;
+
+    @media only screeen and (min-width: 768px) and (max-width: 1023px) {
+        padding-top: 140px;
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 144px;
+    }
 }
 img {
-  vertical-align: bottom;
+    vertical-align: bottom;
 }
 @mixin font($fontSize, $fontWeight, $lineHeight, $letterSpacing, $color) {
-  font-size: $fontSize;
-  font-weight: $fontWeight;
-  line-height: $lineHeight;
-  letter-spacing: $letterSpacing;
-  color: $color;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
 }
-
 @mixin flex($justify, $align) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: row;
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: row;
 }
-/***********
+/*************
 header part
 **************/
 header {
-  width: 327px;
-  margin: 0 auto;
-  margin-bottom: 16px;
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: 573px;
-  }
-  @media only screen and (min-width: 1024px) {
-    width: 730px;
-    margin-bottom: 24px;
-  }
-  .upperHead {
-    @include flex(space-between, center);
-    padding-bottom: 36px;
-    p:first-child {
-      @include font(26px, 700, 39px, normal, $nightBlue1);
+    width: 327px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 573px;
     }
-  }
-  .upperSmall {
-    @include flex(space-between, center);
-    width: 78px;
-    p:first-child {
-      @include font(13px, 700, 19px, 2.5px, $blueGrey);
-      text-transform: uppercase;
-      width: 40px;
+    @media only screen and (min-width: 1024px) {
+        width: 730px;
+        margin-bottom: 24px;
     }
-  }
-  .lowerHead {
-    width: 100%;
-    @include flex(space-between, center);
-    background: $almostWhite;
-    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-    border-radius: 15px;
-    padding: 6.5px 7px 7.5px 16px;
-    @media only screen and (min-width: 768px) {
-      padding: 9.5px 10px 9.5px 32px;
+    .upperHead {
+        @include flex(space-between, center);
+        padding-bottom: 36px;
+        p:first-child {
+            @include font(26px, 700, 39px, normal, $nightBlue1);
+        }
     }
-  }
-  img {
-    height: 20px;
-    width: 20px;
-    @media only screen and (min-width: 768px) {
-      height: 24px;
-      width: 24px;
+    .upperSmall {
+        @include flex(space-between, center);
+        width: 78px;
+        p:first-child {
+            @include font(13px, 700, 19px, 2.5px, $blueGrey);
+            text-transform: uppercase;
+            width: 40px;
+        }
     }
-  }
-  input {
-    border: none;
-    @include font(13px, 400, 25px, normal, $blueGrey);
-    flex-basis: 184px;
-    @media only screen and (min-width: 768px) {
-      @include font(18px, 400, 25px, normal, $blueGrey);
-      flex-basis: 254px;
+    .lowerHead {
+        width: 100%;
+        @include flex(space-between, center);
+        background: $almostWhite;
+        box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+        border-radius: 15px;
+        padding: 6.5px 7px 7.5px 16px;
+        @media only screen and (min-width: 768px) {
+            padding: 9.5px 10px 9.5px 32px;
+        }
     }
-  }
-  button {
-    background: $blue;
-    border-radius: 15px;
-    @include font(14px, 700, 21px, normal, $white);
-    text-align: center;
-    padding: 12.5px 16.5px;
-    border: none;
-    @media only screen and (min-width: 768px) {
-      @include font(16px, 700, 24px, normal, $white);
-      padding: 12.5px 23px 13.5px 24px;
+    img {
+        height: 20px;
+        width: 20px;
+        @media only screen and (min-width: 768px) {
+            height: 24px;
+            width: 24px;
+        }
     }
-    &:hover {
-      background: #60abff;
+
+    .mainForm {
+        flex-basis: 275px;
+        @include flex(space-between, center);
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            @include flex(space-between, center);
+            flex-basis: 480px;
+        }
+        @media only screen and (min-width: 1024px) {
+            @include flex(space-between, center);
+            flex-basis: 650px;
+        }
     }
-  }
+    #switch2 {
+        display: none;
+    }
+    input {
+        border: none;
+        @include font(13px, 400, 25px, normal, $blueGrey);
+        flex-basis: 184px;
+        outline: none;
+        @media only screen and (min-width: 768px) {
+            @include font(18px, 400, 25px, normal, $blueGrey);
+            flex-basis: 254px;
+        }
+    }
+
+    .searchResult {
+        @include font(11px, 700, 19px, normal, #f74646);
+        padding-left: 0;
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            @include font(15px, 700, 22px, normal, #f74646);
+            padding-left: 0;
+        }
+        @media only screen and (min-width: 1024px) {
+            @include font(15px, 700, 22px, normal, #f74646);
+            padding-left: 150px;
+        }
+    }
+    button {
+        background: $blue;
+        border-radius: 15px;
+        @include font(14px, 700, 21px, normal, $white);
+        text-align: center;
+        padding: 12.5px 16.5px;
+        border: none;
+        @media only screen and (min-width: 768px) {
+            @include font(16px, 700, 24px, normal, $white);
+            padding: 12.5px 23px 13.5px 24px;
+        }
+        &:hover {
+            background: #60abff;
+        }
+    }
 }
 /***********
 main part
 **************/
 main {
-  width: 327px;
-  margin: 0 auto;
-  background: $almostWhite;
-  border-radius: 15px;
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-  padding: 32px 24px 48px;
-  position: relative;
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: 573px;
-    padding: 40px;
-  }
-  @media only screen and (min-width: 1024px) {
-    width: 730px;
-    padding: 48px;
-    margin-bottom: 100px;
-    @include flex(space-between, flex-start);
-  }
-}
-section {
-  @media only screen and (min-width: 1024px) {
-    padding-top: 100px;
-    width: 480px;
-  }
-}
-figure.pic {
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  @media only screen and (min-width: 768px) {
-    width: 117px;
-    height: 117px;
-  }
-  img {
-    width: 100%;
-    border-radius: 60px;
-    border: 1px solid #979797;
-  }
-}
-article.big {
-  @media only screen and (min-width: 1024px) {
-    width: 100%;
-    @include flex(space-between, flex-start);
-  }
-}
-div.hTwo {
-  position: absolute;
-  top: 33px;
-  padding: 0 0 0 89px;
-  @include flex(space-between, flex-start);
-  flex-direction: column;
-  height: 70px;
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    top: 52px;
-    height: 91px;
-    padding: 0 0 0 158px;
-  }
-  @media only screen and (min-width: 1024px) {
-    top: 45px;
-    height: 65px;
-    padding: 0;
-  }
-  h2 {
-    @include font(16px, 700, 24px, normal, $nightBlue2);
-    @media only screen and (min-width: 768px) {
-      @include font(26px, 700, 39px, normal, $nightBlue2);
-    }
-  }
-  p {
-    @include font(13px, 400, 19px, normal, $blue);
-    @media only screen and (min-width: 768px) {
-      @include font(16px, 400, 24px, normal, $blue);
-    }
-  }
-  p:last-child {
-    @include font(13px, 400, 19px, normal, $grey);
-    @media only screen and (min-width: 768px) {
-      @include font(15px, 400, 22px, normal, $grey);
+    width: 327px;
+    margin: 0 auto;
+    background: $almostWhite;
+    border-radius: 15px;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    padding: 32px 24px 48px;
+    position: relative;
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 573px;
+        padding: 40px;
     }
     @media only screen and (min-width: 1024px) {
-      width: 170px;
-      position: absolute;
-      top: 10px;
-      left: 318px;
+        width: 730px;
+        padding: 48px;
+        margin-bottom: 100px;
+        @include flex(space-between, flex-start);
     }
-  }
 }
-div.text {
-  padding-top: 33px;
-  @include font(13px, 400, 25px, normal, $grey);
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    padding-top: 24px;
-    @include font(15px, 400, 25px, normal, $grey);
-  }
-  @media only screen and (min-width: 1024px) {
-    padding-top: 0;
-    margin-top: -17px;
-    p {
-      @include font(15px, 400, 25px, normal, $grey);
+section {
+    @media only screen and (min-width: 1024px) {
+        padding-top: 100px;
+        width: 480px;
     }
-  }
 }
-article.inform {
-  width: 279px;
-  border-radius: 10px;
-  background: $lightWhite;
-  padding: 18px 14px 19px 15px;
-  margin-top: 41px;
-  @include flex(space-between, center);
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: 493px;
-    padding: 15px 96px 17px 32px;
-    margin-top: 32px;
-  }
-  @media only screen and (min-width: 1024px) {
-    width: 100%;
-    padding: 15px 83px 17px 32px;
-  }
-}
-p {
-  @include font(11px, 400, 16px, normal, $blueGrey);
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    @include font(13px, 400, 19px, normal, $blueGrey);
-  }
-}
-span {
-  display: block;
-  text-align: center;
-  @include font(16px, 700, 24px, normal, $nightBlue2);
-  text-transform: uppercase;
-  margin-top: 8px;
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    @include font(22px, 700, 33px, normal, $nightBlue2);
-    margin-top: 1px;
-    text-align: left;
-  }
-}
-article.social {
-  text-align: left;
-  padding-top: 24px;
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    padding-top: 30px;
-    @include flex(flex-start, center);
-  }
-  @media only screen and (min-width: 1024px) {
-    padding-top: 37px;
-    @include flex(flex-start, center);
-  }
-
-  p {
-    margin-bottom: 16px;
-    @media only screen and (min-width: 768px) {
-      margin-bottom: 0;
-    }
-    a {
-      @include font(13px, 400, 19px, normal, $blueGrey);
-      text-decoration: none;
-      @media only screen and (min-width: 768px) {
-        @include font(15px, 400, 22px, normal, $blueGrey);
-      }
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  span {
+figure.pic {
     display: inline-block;
-    width: 20px;
-    margin-right: 20px;
+    width: 70px;
+    height: 70px;
     @media only screen and (min-width: 768px) {
-      margin-right: 16px;
+        width: 117px;
+        height: 117px;
     }
     img {
-      height: 100%;
+        width: 100%;
+        border-radius: 60px;
+        border: 1px solid #979797;
     }
-  }
-  div.downSocial p:first-child {
-    opacity: 0.5;
-    @media only screen and (min-width: 768px) {
-      margin-bottom: 19px;
+}
+article.big {
+    @media only screen and (min-width: 1024px) {
+        width: 100%;
+        @include flex(space-between, flex-start);
     }
-  }
-  div.upperSocial p:first-child {
-    @media only screen and (min-width: 768px) {
-      margin-bottom: 19px;
+}
+div.hTwo {
+    position: absolute;
+    top: 33px;
+    padding: 0 0 0 89px;
+    @include flex(space-between, flex-start);
+    flex-direction: column;
+    height: 70px;
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        top: 52px;
+        height: 91px;
+        padding: 0 0 0 158px;
     }
-  }
-  div.downSocial p:last-child {
-    margin-bottom: 0;
-  }
+    @media only screen and (min-width: 1024px) {
+        top: 45px;
+        height: 65px;
+        padding: 0;
+    }
+    h2 {
+        @include font(16px, 700, 24px, normal, $nightBlue2);
+        @media only screen and (min-width: 768px) {
+            @include font(26px, 700, 39px, normal, $nightBlue2);
+        }
+    }
+    a {
+        @include font(13px, 400, 19px, normal, $blue);
+        cursor: pointer;
+        @media only screen and (min-width: 768px) {
+            @include font(16px, 400, 24px, normal, $blue);
+        }
+    }
+    p:last-child {
+        @include font(13px, 400, 19px, normal, $grey);
+        @media only screen and (min-width: 768px) {
+            @include font(15px, 400, 22px, normal, $grey);
+        }
+        @media only screen and (min-width: 1024px) {
+            width: 170px;
+            position: absolute;
+            top: 10px;
+            left: 318px;
+        }
+    }
+}
+div.text {
+    padding-top: 33px;
+    @include font(13px, 400, 25px, normal, $grey);
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        padding-top: 24px;
+        @include font(15px, 400, 25px, normal, $grey);
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 0;
+        margin-top: -17px;
+        p {
+            @include font(15px, 400, 25px, normal, $grey);
+        }
+    }
+}
+article.inform {
+    width: 279px;
+    border-radius: 10px;
+    background: $lightWhite;
+    padding: 18px 14px 19px 15px;
+    margin-top: 41px;
+    @include flex(space-between, center);
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 493px;
+        padding: 15px 96px 17px 32px;
+        margin-top: 32px;
+    }
+    @media only screen and (min-width: 1024px) {
+        width: 100%;
+        padding: 15px 83px 17px 32px;
+    }
+}
+p {
+    @include font(11px, 400, 16px, normal, $blueGrey);
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        @include font(13px, 400, 19px, normal, $blueGrey);
+    }
+}
+span {
+    display: block;
+    text-align: center;
+    @include font(16px, 700, 24px, normal, $nightBlue2);
+    text-transform: uppercase;
+    margin-top: 8px;
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        @include font(22px, 700, 33px, normal, $nightBlue2);
+        margin-top: 1px;
+        text-align: left;
+    }
+}
+article.social {
+    text-align: left;
+    padding-top: 24px;
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        padding-top: 30px;
+        @include flex(flex-start, center);
+    }
+    @media only screen and (min-width: 1024px) {
+        padding-top: 37px;
+        @include flex(flex-start, center);
+    }
+    span#alone {
+        @include font(13px, 400, 19px, normal, $blueGrey);
+        text-transform: none;
+        width: 120px;
+        text-align: left;
+        @media only screen and (min-width: 768px) {
+            @include font(15px, 400, 22px, normal, $blueGrey);
+            text-transform: none;
+            width: 120px;
+            text-align: left;
+        }
+    }
+    p {
+        margin-bottom: 16px;
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+        a {
+            @include font(13px, 400, 19px, normal, $blueGrey);
+            text-decoration: none;
+            @media only screen and (min-width: 768px) {
+                @include font(15px, 400, 22px, normal, $blueGrey);
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    span {
+        display: inline-block;
+        width: 20px;
+        margin-right: 20px;
+        @media only screen and (min-width: 768px) {
+            margin-right: 16px;
+        }
+        img {
+            height: 100%;
+        }
+    }
+    .opacity {
+        opacity: 0.5;
+    }
+    div.downSocial p:first-child {
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 19px;
+        }
+    }
+    div.upperSocial p:first-child {
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 19px;
+        }
+    }
+    div.downSocial p:last-child {
+        margin-bottom: 0;
+    }
 }
 .downSocial {
-  @media only screen and (min-width: 768px) {
-    margin-left: 65px;
-  }
+    @media only screen and (min-width: 768px) {
+        margin-left: 65px;
+    }
 }
 /*************
 dark mode settings
-******************/ 
+******************/
 .darkBckg {
-  background:$nightBlue1;
-  //color: $white;
+    background: $nightBlue1;
+    //color: $white;
 }
 .darkBckg .upperHead p:first-child {
-  color: $white;
+    color: $white;
 }
-
 .darkBckg #dark {
-  color: $white;
+    color: $white;
+}
+.darkBckg #switch1 {
+    display: none;
+}
+.darkBckg #switch2 {
+    display: block;
 }
 .darkBckg .lowerHead {
-  background:$nightBlue2;
-  box-shadow: none;
-  color: $white;
+    background: $nightBlue2;
+    box-shadow: none;
+    color: $white;
 }
 .darkBckg .lowerHead input {
-  background:$nightBlue2;
+    background: $nightBlue2;
+    color: $white;
 }
 .darkBckg .lowerHead input::placeholder {
-  color: $white;
+    color: $white;
 }
 .darkBckg .lowerHead button {
-  background-color: #0079FF;
+    background-color: #0079ff;
 }
 .darkBckg main {
-  background-color: $nightBlue2;
-  box-shadow: none;
+    background-color: $nightBlue2;
+    box-shadow: none;
 }
 .darkBckg article.inform {
-  background-color: $nightBlue1;
+    background-color: $nightBlue1;
 }
 .darkBckg .hTwo h2 {
-  color: $white;
+    color: $white;
 }
 .darkBckg .hTwo p:last-child {
-  color: $white;
+    color: $white;
 }
 .darkBckg .text p {
-  color: $white;
+    color: $white;
 }
 .darkBckg .inform p,
 .darkBckg .inform span {
-  color: $white;
+    color: $white;
 }
 .darkBckg a.link {
-  color: $white;
+    color: $white;
 }
-
+.darkBckg .social span#alone {
+    color: $white;
+}
