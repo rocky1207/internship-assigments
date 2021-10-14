@@ -10,19 +10,13 @@ function start() {
     });
   });
 }
+const operations2 = ["DEL", "RESET", ".", "+", "-", "/", "*"];
 function insertButtonCheck(e) {
   if (e.target.innerText == "0" && display.innerText == "0") {
     display.innerText = e.target.innerText;
   } else if (
     display.innerText == "0" &&
-    e.target.innerText != "0" &&
-    e.target.innerText != "DEL" &&
-    e.target.innerText != "RESET" &&
-    e.target.innerText != "." &&
-    e.target.innerText != "+" &&
-    e.target.innerText != "-" &&
-    e.target.innerText != "/" &&
-    e.target.innerText != "*"
+    !operations2.includes(e.target.innerText)
   ) {
     display.innerText = e.target.innerText;
   } else {

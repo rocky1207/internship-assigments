@@ -729,6 +729,10 @@ article.social div.downSocial p:last-child {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 /*************
 dark mode settings
 ******************/

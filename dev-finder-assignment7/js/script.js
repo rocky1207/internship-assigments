@@ -176,3 +176,4 @@ function displayTimeText(info) {
     console.log(`Joined ${day} ${currentMonth} ${year}`);
     return `Joined ${day} ${currentMonth} ${year}`;
 }
+

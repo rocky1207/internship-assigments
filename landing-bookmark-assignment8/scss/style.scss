@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+$white: #ffffff;
+$almostWhite: #F2F2F2;
+$blue: #5267DF;
+$red: #FA5959;
+$grey: #9194A2;
+$almostBlack: #242A45;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+}
+@mixin flex ($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: wrap;
+}
+@mixin font ($fontSize, $fontWeight, $lineHeight, $color) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $color;
+}
