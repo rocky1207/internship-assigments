@@ -9,7 +9,11 @@ app.use(express.urlencoded());
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 // allow CORS
-app.use(cors({}));
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5500/",
+  })
+);
 app.get("/", (req, res) => {
   res.send("Hello world");
 });
