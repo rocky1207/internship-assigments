@@ -17,6 +17,7 @@ document.querySelector('#previous').addEventListener('click', function () {
     if (page != 1) {
         page--;
         querrySetUp();
+        t;
         fetchData(url);
     } else {
         page = 1;
