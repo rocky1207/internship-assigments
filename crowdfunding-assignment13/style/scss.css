@@ -1,0 +1,840 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+/*************
+mixins
+**************/
+/*********
+styles
+***********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.wrapp {
+  width: 325px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .wrapp {
+    width: 730px;
+  }
+}
+
+.wide {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.gradient {
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.blackBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  background: #000000;
+  opacity: 0.5;
+}
+
+body {
+  background: #fafafa;
+  font-family: "Commissioner", sans-serif;
+  position: relative;
+}
+
+main {
+  background: #fafafa;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #000000;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: normal;
+    color: #000000;
+  }
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #7a7a7a;
+}
+@media only screen and (min-width: 768px) {
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: normal;
+    color: #7a7a7a;
+  }
+}
+
+/************
+header
+*************/
+header {
+  background: url(../images/image-hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 32px 24px 248px 24px;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    background: url(../images/image-hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 48px 24px 332px 24px;
+  }
+}
+header div.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  font-family: "Commissioner", sans-serif;
+  margin: 0 auto;
+}
+
+nav.main {
+  z-index: 3;
+  position: absolute;
+  top: 88px;
+  margin: auto;
+  width: 327px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 8px;
+  padding: 0 24px;
+}
+@media only screen and (min-width: 768px) {
+  nav.main {
+    position: static;
+    background: none;
+    width: 225px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+  }
+}
+nav.main a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #000000;
+}
+@media only screen and (min-width: 768px) {
+  nav.main a {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+}
+nav.main a span {
+  display: block;
+  padding: 24px 0;
+}
+@media only screen and (min-width: 768px) {
+  nav.main a span {
+    display: inline;
+    padding: 0;
+  }
+}
+nav.main a span:hover {
+  text-decoration-line: underline;
+}
+nav.main a:first-child::after,
+nav.main a:nth-child(2)::after {
+  display: block;
+  content: "";
+  width: 327px;
+  height: 1px;
+  background: #000000;
+  opacity: 0.15;
+  margin-left: -24px;
+}
+@media only screen and (min-width: 768px) {
+  nav.main a:first-child::after,
+nav.main a:nth-child(2)::after {
+    display: none;
+  }
+}
+
+/*************
+top
+***************/
+.top {
+  margin: -50px auto 24px auto;
+  padding: 0 24px 40px 24px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .top {
+    margin: -90px auto 24px auto;
+    padding: 0 48px 48px 48px;
+  }
+}
+.top h1 {
+  margin: 0 auto;
+  padding: 24px 0 16px 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #000000;
+  width: 250px;
+}
+@media only screen and (min-width: 768px) {
+  .top h1 {
+    padding: 24px 0 16px 0;
+    width: 100%;
+  }
+}
+
+img.mastercraft {
+  margin-top: -28px;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Commissioner", sans-serif;
+  padding-top: 24px;
+}
+
+.action {
+  background: #3cb3ab;
+  padding: 17px 24px 19px 24px;
+  border-radius: 33px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #ffffff;
+  border: none;
+}
+.action:hover {
+  background: #147A73;
+  cursor: pointer;
+}
+
+.bookmarkDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Commissioner", sans-serif;
+  position: relative;
+}
+.bookmarkDiv:hover img {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.bookmarkDiv:visited {
+  background: #147A73;
+}
+.bookmarkDiv img {
+  position: absolute;
+  left: -56px;
+}
+
+.bookmark {
+  background: #fafafa;
+  padding: 17px 24px 19px 72px;
+  border-radius: 33px;
+  border: none;
+  margin-left: -56px;
+}
+.bookmark:hover {
+  cursor: pointer;
+}
+.bookmark span {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #7a7a7a;
+  opacity: none;
+}
+
+/************
+informations
+**************/
+.informations {
+  margin: 0 auto 24px auto;
+  padding: 32px 24px 40px 24px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .informations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+    padding: 48px;
+  }
+}
+.informations p {
+  margin: 0 auto;
+  line-height: 17px;
+}
+@media only screen and (min-width: 768px) {
+  .informations p {
+    margin: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    padding-right: 55px;
+  }
+}
+.informations p::after {
+  display: block;
+  margin: 24px auto;
+  content: "";
+  width: 80px;
+  height: 1px;
+  background: #000000;
+  opacity: 0.15;
+}
+@media only screen and (min-width: 768px) {
+  .informations p::after {
+    display: none;
+  }
+}
+.informations p span {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: normal;
+  color: #000000;
+  padding-bottom: 9px;
+}
+@media only screen and (min-width: 768px) {
+  .informations p:last-child {
+    padding-right: 120px;
+    border-right: none;
+  }
+}
+
+/************
+aboutProject
+**************/
+.aboutProject {
+  padding: 40px 24px;
+  text-align: left;
+  background: #ffffff;
+}
+@media only screen and (min-width: 768px) {
+  .aboutProject {
+    padding: 48px 48px 24px 48px;
+  }
+}
+.aboutProject h2 {
+  padding-bottom: 24px;
+}
+.aboutProject h3 {
+  padding-bottom: 8px;
+}
+
+.first-child {
+  padding-bottom: 24px;
+}
+
+.product {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 29px 24px 24px 24px;
+}
+@media only screen and (min-width: 768px) {
+  .product {
+    padding: 38px 32px 32px 32px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .product div.flex-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+    padding-bottom: 24px;
+  }
+}
+.product div.flex-div h3 {
+  padding-bottom: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .product div.flex-div h3 {
+    padding: 0;
+  }
+}
+.product span.pledge {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: normal;
+  color: #3cb3ab;
+  padding-bottom: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .product span.pledge {
+    padding: 0;
+  }
+}
+.product p {
+  padding-bottom: 24px;
+}
+.product span {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: normal;
+  color: #000000;
+  padding-right: 8px;
+}
+.product button {
+  background: #3cb3ab;
+  padding: 15px 33px;
+  border-radius: 33px;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.product button:hover {
+  background: #147A73;
+}
+
+div.flex-div.reward {
+  padding-bottom: 0;
+}
+
+.margin {
+  margin-top: 35px;
+}
+@media only screen and (min-width: 768px) {
+  .margin {
+    margin-top: 40px;
+  }
+}
+
+.specialEdition {
+  opacity: 0.5;
+}
+.specialEdition button {
+  background: #2f2f2f;
+}
+@media only screen and (min-width: 768px) {
+  .specialEdition button {
+    padding: 15px 38px;
+  }
+}
+.specialEdition button:hover {
+  background: #2f2f2f;
+}
+
+/**********
+selection
+************/
+.selection {
+  border-radius: 8px;
+  padding: 32px 24px;
+  background: #ffffff;
+  position: absolute;
+  top: 121px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 6;
+}
+@media only screen and (min-width: 768px) {
+  .selection {
+    width: 730px;
+    top: 184px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 48px;
+  }
+}
+.selection h2 {
+  padding-bottom: 0;
+}
+.selection h3:hover {
+  color: #3cb3ab;
+  cursor: pointer;
+}
+
+p.monitor {
+  padding-bottom: 24px;
+}
+@media only screen and (min-width: 768px) {
+  p.monitor {
+    padding-bottom: 32px;
+  }
+}
+
+p.no-reward-p {
+  padding: 0 0 32px 0;
+}
+@media only screen and (min-width: 768px) {
+  p.no-reward-p {
+    padding: 0 0 0 47px;
+  }
+}
+
+.selection article.product {
+  padding: 33px 24px 0 24px;
+}
+@media only screen and (min-width: 768px) {
+  .selection article.product {
+    padding: 33px 28px;
+  }
+}
+
+.selection img[alt=close-hover] {
+  height: 20px;
+  width: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .big-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.big-flex .flex-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Commissioner", sans-serif;
+}
+@media only screen and (min-width: 768px) {
+  .big-flex .flex-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+    flex: 80%;
+    order: 1;
+  }
+}
+
+p.num {
+  padding-bottom: 32px;
+}
+@media only screen and (min-width: 768px) {
+  p.num {
+    flex: 20%;
+    order: 2;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: normal;
+    color: #7a7a7a;
+  }
+}
+p.num span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+  p.description {
+    flex: 100%;
+    order: 3;
+    padding: 0 0 0 47px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .small-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+  }
+  .small-flex span.pledge {
+    vertical-align: top;
+  }
+}
+
+.flex-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Commissioner", sans-serif;
+  padding-bottom: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .flex-div {
+    padding-bottom: 32px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  article.product .big-flex div.flex-div {
+    padding-bottom: 0;
+  }
+}
+
+article.product .flex-div-desk {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Commissioner", sans-serif;
+  padding-bottom: 37px;
+}
+@media only screen and (min-width: 768px) {
+  article.product .flex-div-desk {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+    padding-bottom: 17px;
+  }
+}
+article.product .flex-div-desk h3 {
+  padding: 0 0 0 16px;
+}
+@media only screen and (min-width: 768px) {
+  .product .big-flex .flex-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+  }
+}
+.product .big-flex .flex-div h3 {
+  padding: 0 0 8px 16px;
+}
+@media only screen and (min-width: 768px) {
+  .product .big-flex .flex-div h3 {
+    padding: 0 0 0 24px;
+  }
+}
+.product .big-flex .flex-div p {
+  padding: 0 0 0 16px;
+}
+
+.specialEdition h3:hover {
+  color: black;
+  opacity: 1;
+  cursor: auto;
+}
+
+.outer-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #7a7a7a;
+}
+
+.inner-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3cb3ab;
+  margin: 5px;
+}
+
+.choose-pledge {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .choose-pledge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Commissioner", sans-serif;
+    flex-wrap: wrap;
+  }
+}
+.choose-pledge::before {
+  display: block;
+  content: "";
+  height: 1px;
+  background: #000000;
+  opacity: 0.15;
+  padding: 0;
+  width: 277px;
+  margin-left: -25px;
+}
+@media only screen and (min-width: 768px) {
+  .choose-pledge::before {
+    margin-left: -27px;
+    margin-right: -28px;
+    margin-bottom: 24px;
+    width: 655px;
+    margin-top: 32px;
+  }
+}
+.choose-pledge p:first-child {
+  padding-top: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .choose-pledge p:first-child {
+    padding: 0;
+  }
+}
+.choose-pledge button {
+  background: #3cb3ab;
+  padding: 15px 25px;
+  border-radius: 33px;
+}
+
+@media only screen and (min-width: 768px) {
+  .choose-pledge div.flex-div {
+    padding-bottom: 0;
+  }
+}
+
+.choose-pledge p.input_p {
+  margin-right: 16px;
+  width: 100px;
+  padding: 12.5px 24px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Commissioner", sans-serif;
+}
+.choose-pledge p.input_p span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: normal;
+  color: #000000;
+  opacity: 0.25;
+}
+.choose-pledge p.input_p input {
+  border: none;
+  width: 100%;
+  outline: none;
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: normal;
+  color: #000000;
+  text-align: start;
+  padding-top: 3px;
+}
+
+/**********
+success
+************/
+.success {
+  position: absolute;
+  z-index: 3;
+  width: 327px;
+  background: #ffffff;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 8px;
+  top: 143px;
+  left: 50%;
+  transform: translate(-50%);
+  margin: auto;
+  padding: 32px 24px 40px 24px;
+}
+.success h2 {
+  padding: 24px 0;
+}
+.success p {
+  padding-bottom: 32px;
+}
+.success button {
+  background: #3cb3ab;
+  padding: 15px 25px;
+  border-radius: 33px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: normal;
+  color: #ffffff;
+  border: none;
+}
+.success button:hover {
+  background: #147A73;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=scss.css.map */

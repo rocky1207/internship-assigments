@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+$white: #ffffff;
+$black: #000000;
+$almostWhite: #fafafa;
+$niceBlue: #3cb3ab;
+$brown: #2f2f2f;
+$grey: #7a7a7a;
+$hoverNiceBlue: #147a73;
+/*************
+mixins
+**************/
+@mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    font-family: 'Commissioner', sans-serif;
+}
+@mixin button($background, $padding, $radius) {
+    background: $background;
+    padding: $padding;
+    border-radius: $radius;
+}
+@mixin font($size, $weight, $height, $spacing, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    color: $color;
+}
+/*********
+styles
+***********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
+.wrapp {
+    width: 325px;
+    margin: 0 auto;
+    @media only screen and (min-width: 768px) {
+        width: 730px;
+    }
+}
+.wide {
+    width: 1100px;
+    margin: 0 auto;
+}
+.gradient {
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    opacity: 0.5;
+}
+.blackBackground {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background: $black;
+    opacity: 0.5;
+}
+body {
+    background: $almostWhite;
+    font-family: 'Commissioner', sans-serif;
+    position: relative;
+    height: 100vh;
+}
+main {
+    background: $almostWhite;
+}
+h2 {
+    @include font(18px, 700, 22px, normal, $black);
+    @media only screen and (min-width: 768px) {
+        @include font(20px, 700, 24px, normal, $black);
+    }
+}
+h3 {
+    @include font(14px, 700, 17px, normal, $black);
+}
+p {
+    @include font(14px, 400, 24px, normal, $grey);
+    @media only screen and (min-width: 768px) {
+        @include font(16px, 400, 30px, normal, $grey);
+    }
+}
+/************
+header
+*************/
+header {
+    background: url(../images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 32px 24px 248px 24px;
+    @media only screen and (min-width: 768px) {
+        background: url(../images/image-hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 48px 24px 332px 24px;
+    }
+    div.head {
+        @include flex(space-between, flex-start);
+        margin: 0 auto;
+    }
+}
+nav.main {
+    z-index: 3;
+    position: absolute;
+    top: 88px;
+    margin: auto;
+    width: 327px;
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    padding: 0 24px;
+    @media only screen and (min-width: 768px) {
+        position: static;
+        background: none;
+        width: 225px;
+        border: none;
+        padding: 0;
+        margin: 0;
+        @include flex(space-between, center);
+    }
+    a {
+        display: block;
+        text-decoration: none;
+        @include font(18px, 500, 22px, normal, $black);
+        @media only screen and (min-width: 768px) {
+            @include font(13px, 500, 16px, normal, $white);
+        }
+        span {
+            display: block;
+            padding: 24px 0;
+            @media only screen and (min-width: 768px) {
+                display: inline;
+                padding: 0;
+            }
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+    }
+    a:first-child,
+    a:nth-child(2) {
+        &::after {
+            display: block;
+            content: '';
+            width: 327px;
+            height: 1px;
+            background: $black;
+            opacity: 0.15;
+            margin-left: -24px;
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}
+/*************
+top
+***************/
+.top {
+    margin: -50px auto 24px auto;
+    padding: 0 24px 40px 24px;
+    text-align: center;
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    @media only screen and (min-width: 768px) {
+        margin: -90px auto 24px auto;
+        padding: 0 48px 48px 48px;
+    }
+    h1 {
+        margin: 0 auto;
+        padding: 24px 0 16px 0;
+        @include font(20px, 700, 24px, normal, $black);
+        width: 250px;
+        @media only screen and (min-width: 768px) {
+            padding: 24px 0 16px 0;
+            width: 100%;
+        }
+    }
+}
+img.mastercraft {
+    margin-top: -28px;
+}
+.top-buttons {
+    @include flex(space-between, center);
+    padding-top: 24px;
+}
+.action {
+    @include button($niceBlue, 17px 24px 19px 24px, 33px);
+    @include font(16px, 700, 20px, normal, $white);
+    border: none;
+    &:hover {
+        background: $hoverNiceBlue;
+        cursor: pointer;
+    }
+}
+.bookmarkDiv {
+    @include flex(space-between, center);
+    position: relative;
+    &:hover {
+        img {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+    &:visited {
+        background: $hoverNiceBlue;
+    }
+    img {
+        position: absolute;
+        left: -56px;
+    }
+}
+.bookmark {
+    @include button($almostWhite, 17px 24px 19px 72px, 33px);
+    border: none;
+    margin-left: -56px;
+    &:hover {
+        cursor: pointer;
+    }
+    span {
+        @include font(16px, 700, 20px, normal, $grey);
+        opacity: none;
+    }
+}
+/************
+informations
+**************/
+.informations {
+    margin: 0 auto 24px auto;
+    padding: 32px 24px 40px 24px;
+    text-align: center;
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    @media only screen and (min-width: 768px) {
+        padding: 48px;
+    }
+    p {
+        margin: 0 auto;
+        line-height: 17px;
+        @media only screen and (min-width: 768px) {
+            margin: 0;
+            border-right: 1px solid rgba(0, 0, 0, 0.15);
+            padding-right: 55px;
+        }
+        &::after {
+            display: block;
+            margin: 24px auto;
+            content: '';
+            width: 80px;
+            height: 1px;
+            background: $black;
+            opacity: 0.15;
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+        span {
+            display: block;
+            @include font(32px, 700, 39px, normal, $black);
+            padding-bottom: 9px;
+        }
+    }
+    p:last-child {
+        &::after {
+            display: none;
+        }
+        @media only screen and (min-width: 768px) {
+            padding-right: 120px;
+            border-right: none;
+            
+        }
+    }
+}
+.informations-flex {
+    padding-bottom: 32px;
+    @media only screen and (min-width: 768px) {
+        @include flex(space-between, center);
+        padding-bottom: 37px;
+    }
+}
+.progress {
+    max-width: 100%;
+    
+    background: $niceBlue;
+    border-radius: 33.5px;
+    @media only screen and (min-width: 768px) {
+        
+    }
+}
+.bar {
+    height: 12px;
+    width: 279px;
+    background: $brown;
+    opacity: 0.05;
+    border-radius: 33.5px;
+    @media only screen and (min-width: 768px) {
+        
+        width: 632px;
+    }
+}
+/************
+aboutProject
+**************/
+.aboutProject {
+    padding: 40px 24px;
+    text-align: left;
+    background: $white;
+    @media only screen and (min-width: 768px) {
+        padding: 48px 48px 24px 48px;
+    }
+    h2 {
+        padding-bottom: 24px;
+    }
+    h3 {
+        padding-bottom: 8px;
+    }
+}
+.first-child {
+    padding-bottom: 24px;
+}
+
+.product {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    padding: 29px 24px 24px 24px;
+
+    @media only screen and (min-width: 768px) {
+        padding: 38px 32px 32px 32px;
+    }
+
+    div.flex-div {
+        @media only screen and (min-width: 768px) {
+            @include flex(space-between, center);
+            padding-bottom: 24px;
+        }
+    }
+    div.flex-div h3 {
+        padding-bottom: 8px;
+        @media only screen and (min-width: 768px) {
+            padding: 0;
+        }
+    }
+    span.pledge {
+        @include font(14px, 500, 17px, normal, $niceBlue);
+        padding-bottom: 24px;
+        @media only screen and (min-width: 768px) {
+            padding: 0;
+        }
+    }
+    p {
+        padding-bottom: 24px;
+    }
+    span {
+        @include font(32px, 700, 39px, normal, $black);
+        padding-right: 8px;
+    }
+    button {
+        @include button($niceBlue, 15px 33px, 33px);
+        border: none;
+        @include font(14px, 700, 17px, normal, $white);
+        &:hover {
+            background: $hoverNiceBlue;
+        }
+    }
+}
+
+div.flex-div.reward {
+    padding-bottom: 0;
+}
+.margin {
+    margin-top: 35px;
+    @media only screen and (min-width: 768px) {
+        margin-top: 40px;
+    }
+}
+.specialEdition {
+    opacity: 0.5;
+    button {
+        background: $brown;
+        @media only screen and (min-width: 768px) {
+            padding: 15px 38px;
+        }
+        &:hover {
+            background: $brown;
+        }
+    }
+}
+/**********
+selection
+************/
+.selection {
+    border-radius: 8px;
+    padding: 32px 24px;
+    background: $white;
+    position: absolute;
+    top: 121px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 6;
+    @media only screen and (min-width: 768px) {
+        //margin: -90px auto 24px auto;
+        width: 730px;
+        top: 184px;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 48px;
+    }
+    h2 {
+        padding-bottom: 0;
+    }
+    h3 {
+        &:hover {
+            color: $niceBlue;
+            cursor: pointer;
+        }
+    }
+}
+p.monitor {
+    padding-bottom: 24px;
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 32px;
+    }
+}
+p.no-reward-p {
+    padding: 0 0 32px 0;
+    @media only screen and (min-width: 768px) {
+        padding: 0 0 0 47px;
+    }
+}
+.selection article.product {
+    padding: 33px 24px 0 24px;
+    @media only screen and (min-width: 768px) {
+        padding: 33px 28px;
+    }
+}
+
+.selection img[alt='close-hover'] {
+    height: 20px;
+    width: 20px;
+}
+.big-flex {
+    @media only screen and (min-width: 768px) {
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+.big-flex .flex-div {
+    @include flex(flex-start, center);
+    @media only screen and (min-width: 768px) {
+        @include flex(space-between, center);
+        flex: 80%;
+        order: 1;
+    }
+}
+p.num {
+    padding-bottom: 32px;
+    @media only screen and (min-width: 768px) {
+        flex: 20%;
+        order: 2;
+        text-align: right;
+        @include font(15px, 400, 18px, normal, $grey);
+    }
+    span {
+        @include font(18px, 700, 22px, normal, $black);
+    }
+}
+p.description {
+    @media only screen and (min-width: 768px) {
+        flex: 100%;
+        order: 3;
+        padding: 0 0 0 47px;
+    }
+}
+.small-flex {
+    @media only screen and (min-width: 768px) {
+        @include flex(flex-start, flex-start);
+        span.pledge {
+            vertical-align: top;
+        }
+    }
+}
+
+.flex-div {
+    @include flex(space-between, center);
+    padding-bottom: 24px;
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 32px;
+    }
+}
+
+article.product .big-flex div.flex-div {
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 0;
+    }
+}
+
+article.product .flex-div-desk {
+    @include flex(flex-start, center);
+    padding-bottom: 37px;
+    @media only screen and (min-width: 768px) {
+        @include flex(flex-start, flex-start);
+        padding-bottom: 17px;
+    }
+    h3 {
+        padding: 0 0 0 16px;
+        @media only screen and (min-width: 768px) {
+        }
+    }
+}
+
+.product .big-flex .flex-div {
+    @media only screen and (min-width: 768px) {
+        @include flex(flex-start, center);
+    }
+    h3 {
+        padding: 0 0 8px 16px;
+        @media only screen and (min-width: 768px) {
+            padding: 0 0 0 24px;
+        }
+    }
+    p {
+        padding: 0 0 0 16px;
+    }
+}
+.specialEdition {
+    h3 {
+        &:hover {
+            color: black;
+            opacity: 1;
+            cursor: auto;
+        }
+    }
+    button.sendAmmount-js  {
+        background: $brown;
+    }
+}
+.outer-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid $grey;
+}
+.inner-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $niceBlue;
+    margin: 5px;
+}
+.choose-pledge {
+    text-align: center;
+    @media only screen and (min-width: 768px) {
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        &.hidden {
+            display: none;
+        }
+    }
+    &::before {
+        display: block;
+        content: '';
+        height: 1px;
+        background: $black;
+        opacity: 0.15;
+        padding: 0;
+        width: 277px;
+        margin-left: -25px;
+        @media only screen and (min-width: 768px) {
+            margin-left: -27px;
+            margin-right: -28px;
+            margin-bottom: 24px;
+            width: 655px;
+            margin-top: 32px;
+        }
+    }
+
+    p:first-child {
+        padding-top: 24px;
+        @media only screen and (min-width: 768px) {
+            padding: 0;
+        }
+    }
+    button {
+        @include button($niceBlue, 15px 25px, 33px);
+    }
+}
+.choose-pledge div.flex-div {
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 0;
+    }
+}
+.choose-pledge p.input_p {
+    margin-right: 16px;
+    width: 100px;
+    padding: 12.5px 24px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 33px;
+    @include flex(space-between, center);
+    span {
+        @include font(14px, 700, 17px, normal, $black);
+        opacity: 0.25;
+    }
+    input {
+        border: none;
+        width: 100%;
+        outline: none;
+        opacity: 1;
+        @include font(14px, 700, 17px, normal, $black);
+        text-align: start;
+        padding-top: 3px;
+    }
+}
+/**********
+success
+************/
+.success {
+    position: absolute;
+    z-index: 3;
+    width: 327px;
+    background: $white;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    top: 143px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: auto;
+    padding: 32px 24px 40px 24px;
+    h2 {
+        padding: 24px 0;
+    }
+    p {
+        padding-bottom: 32px;
+    }
+    button {
+        @include button($niceBlue, 15px 25px, 33px);
+        @include font(14px, 700, 17px, normal, $white);
+        border: none;
+        &:hover {
+            background: $hoverNiceBlue;
+            cursor: pointer;
+        }
+    }
+}

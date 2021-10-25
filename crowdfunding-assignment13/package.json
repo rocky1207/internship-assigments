@@ -1,0 +1,15 @@
+{
+  "name": "crowdfunding-assignment13",
+  "version": "1.0.0",
+  "description": "**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,scss}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}
