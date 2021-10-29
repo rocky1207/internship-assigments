@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom video player</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+    <div id="videoDiv" class="margin videoDiv-js">
+        <video>
+            <source src="videos/clip1.mp4" type="video/mp4">
+        </video>
+        <div id="controls" class="controls-js">
+            <div class="bigFlex">
+                <div>
+                    <i class="fa fa-play fa-play-js" aria-hidden="true"></i>
+                    <i class="fa fa-pause fa-pause-js hidden" aria-hidden="true"></i>
+                    <p class="time"><span id="currentTime-js">0:00</span>/30.14</p>
+                </div>
+                <div class="rightSideControls">
+                    <div class="volumeDiv volumeDiv-js hidden">
+                        <input class="volume-js" value="20" type="range" min="0" max="100" step="1">
+                    </div>
+                    <i class="fa fa-volume-up fa-volume-up-js" aria-hidden="true"></i>
+                    <i class="fa fa-volume-off fa-volume-off-js hidden"></i>
+                    <div class="speedDiv speedDiv-js hidden">
+                        <p class="speed speed-js">2.0x</p>
+                        <p class="speed speed-js">1.5x</p>
+                        <p class="speed speed-js">1.0x</p>
+                        <p class="speed speed-js">0.75x</p>
+                        <p class="speed speed-js">0.5x</p>
+                    </div>
+                    <p class="regularSpeed regularSpeed-js">1.0x</p>
+                    <i class="fa fa-expand fa-expand-js" aria-hidden="true"></i>
+                </div>
+            </div>
+            <progress></progress>
+        </div>
+    </div>
+<script src="js/script.js"></script>
+</body>
+
+</html>
