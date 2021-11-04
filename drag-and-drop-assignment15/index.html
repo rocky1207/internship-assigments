@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Drag and drop</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+<body>
+    <main class="wrapp">
+        <section id="backLog" class="section">
+            
+            <div class="flex">
+                <h2>backlog</h2>
+                <i class="fa fa-plus fa-plus-js" aria-hidden="true"></i>
+            </div>
+            <article class="hide create-task create-task-js">
+                <input class="input-task input-task-js" type="text" placeholder="Add tasks name">
+                <button class="submit submit-js" value="0">Save</button>
+            </article>
+            <!-- <article class="task task-js" draggable="true">
+                <h3>task 1</h3>
+            </article>-->
+        </section> 
+        <section id="toDo" class="section">
+            <div class="flex">
+                <h2>todo</h2>
+                <i class="fa fa-plus fa-plus-js" aria-hidden="true"></i>
+            </div>
+            <article class="hide create-task create-task-js">
+                <input class="input-task input-task-js" type="text" placeholder="Add tasks name">
+                <button class="submit submit-js" value="1">Save</button>
+            </article>
+        </section>
+        <section id="inProgress" class="section">
+            <div class="flex">
+                <h2>in progress</h2>
+                <i class="fa fa-plus fa-plus-js" aria-hidden="true"></i>
+            </div>
+            <article class="hide create-task create-task-js">
+                <input class="input-task input-task-js" type="text" placeholder="Add tasks name">
+                <button class="submit submit-js" value="2">Save</button>
+            </article>
+        </section>
+        <section id="done" class="section">
+            <div class="flex">
+                <h2>done</h2>
+                <i class="fa fa-plus fa-plus-js" aria-hidden="true"></i>
+            </div>
+            <article class="hide create-task create-task-js">
+                <input class="input-task input-task-js" type="text" placeholder="Add tasks name">
+                <button class="submit submit-js" value="3">Save</button>
+            </article>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
