@@ -1,6 +1,5 @@
 const pluses = document.querySelectorAll('.fa-plus-js');
 let mainDiv;
-// let backlogArr = [];
 
 for (let i = 0; i < pluses.length; i++) {
     pluses[i].addEventListener('click', () => {
@@ -8,6 +7,7 @@ for (let i = 0; i < pluses.length; i++) {
         hide(plus, i);
     });
 }
+
 function removeHide(el) {
     el.classList.remove('hide');
 }
@@ -41,31 +41,31 @@ function createTask(num, inputValue) {
     h3.innerText = `${inputValue}`;
     newTask.appendChild(h3);
     sections[num].appendChild(newTask);
-    saveMain(); /* u momentu kreiranja svakog novog zadatka (ARTICLE elementa) pozivam ovu funkciju */
+    //saveMain(); /* u momentu kreiranja svakog novog zadatka (ARTICLE elementa) pozivam ovu funkciju */
     addFunctions();
 }
-/* SPORNI MOMENTAT */
+/* SPORNI MOMENTAT 
+
 function saveMain() {
     mainDiv = document.querySelector('body');
-
-    localStorage.setItem('saved', 'true');
+    localStorage.setItem('body', mainDiv.innerHTML);
 }
+
 window.addEventListener('load', init);
 function init() {
-    let saved = localStorage.getItem('saved');
+    let saved = localStorage.getItem('body');
     if (saved) {
-        ispis(mainDiv);
+        ispis(saved);
     }
 }
-
 function ispis(mainDiv) {
     console.log(mainDiv);
     let body = document.querySelector('body');
-    body.appendChild(mainDiv);
+    body.innerHTML = mainDiv;
 }
-
-/*************** */
+*/
 const sections = document.querySelectorAll('.section');
+
 function addFunctions() {
     tasks = document.querySelectorAll('.task-js');
     for (task of tasks) {
